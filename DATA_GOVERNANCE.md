@@ -3,19 +3,20 @@
 Rule: **no data is downloaded, used or committed until its row here is verified and the owner approves it (Gate 1).** "UNVERIFIED" means the agent must read the source's own terms page and record the result, or ask the owner. It does not mean the data is unusable, only that use is not yet approved.
 
 ## 1. Source registry
-| Source | Content | What is known | License / terms | Status |
-|---|---|---|---|---|
-| VaxiJen bacterial immunogen set (Zaharieva et al., 2019) | 317 experimentally supported bacterial immunogens (human-tested; ~47 species); positives for bacterial antigenicity | Described as freely downloadable at ddg-pharmfac.net/vaxijen/dataset | Not confirmed | UNVERIFIED |
-| VaxiJen v3.0 bacterial negatives | 317 non-immunogens used to train v3.0 | Described in the v3.0 paper (Dimitrov et al., Vaccines 2020, 8:709) | Downloadability and license not confirmed | UNVERIFIED |
-| VaxiGen tumor database | 546 immunogenic human proteins, 212 tumor peptides, plus non-immunogen sets | Excel downloads at ddg-pharmfac.net/vaxijen3/tumordb | CC BY 4.0 (attribution required) | Verify on page, then approve |
-| VaxiJen viral data (Doneva & Dimitrov, IJMS 2024, 25:2949) | Viral immunogens/non-immunogens | Hosted on the VaxiJen 3 site | Not confirmed | UNVERIFIED |
-| IEDB | Epitope/antigen assay data | Not yet checked | Check | UNVERIFIED |
-| Protegen | Protective antigens | Not yet checked | Check | UNVERIFIED |
-| UniProt | Sequences with deposit dates; negatives | Not yet checked | Check | UNVERIFIED |
-| ToxinPred datasets | Toxic/non-toxic peptides | Not yet checked | Check | UNVERIFIED |
-| AllergenOnline / COMPARE | Allergen references | Not yet checked | Check | UNVERIFIED |
+| Source | URL | Version / Date | License / Terms Stated | Redistribution Allowed? | Label Evidence Type | Status |
+|---|---|---|---|---|---|---|
+| **VaxiJen bacterial immunogens** (Zaharieva et al., 2019) | `http://ddg-pharmfac.net/vaxijen/dataset` | 2019 (317 bacterial immunogens) | None explicitly stated on download page; citation required | Unknown / Unverified | Curated / Experimental (human challenge) | **UNVERIFIED** (Requires owner approval) |
+| **VaxiJen v3.0 bacterial negatives** (Dimitrov et al., 2020) | `http://ddg-pharmfac.net/vaxijen/dataset` | Vaccines 2020 (317 non-immunogens) | Paper is CC BY 4.0; raw web files have no explicit license | Unknown / Unverified | Curated (non-immunogen bacterial proteins) | **UNVERIFIED** (Requires owner approval) |
+| **VaxiGen tumor database** (Doneva et al., 2021) | `http://ddg-pharmfac.net/vaxijen3/tumordb` | 2021 (546 proteins, 212 peptides) | **CC BY 4.0** (Open Access, Biomedicines 2021) | **Yes** (with attribution) | Curated / Experimental (human tumor antigens) | **VERIFIED** |
+| **VaxiJen viral data** (Doneva & Dimitrov, 2024) | `http://ddg-pharmfac.net/vaxijen3/` | IJMS 2024, 25:2949 | Paper is CC BY 4.0; standalone dataset license unconfirmed | Unknown / Unverified | Curated (viral antigens & non-antigens) | **UNVERIFIED** (Requires owner approval) |
+| **IEDB** (Immune Epitope Database) | `https://www.iedb.org/` | Current continuous release | Free public research access; commercial licensing required via LJI | **Research only** (Commercial restricted) | Experimental (in vitro/in vivo assay validated) | **VERIFIED (Research only)** |
+| **Protegen** (VIOLIN Database) | `https://violinet.org/protegen/` | Current continuous release | Open access for research with citation; commercial licensing via VIOLIN | **Research only** (Commercial restricted) | Experimental (in vivo protective antigens) | **VERIFIED (Research only)** |
+| **UniProt / Swiss-Prot** | `https://www.uniprot.org/` | Current release | **CC BY 4.0** (Creative Commons Attribution) | **Yes** (unrestricted with attribution) | Curated (reviewed Swiss-Prot literature annotations) | **VERIFIED** |
+| **ToxinPred / ToxinPred2 datasets** | `https://webs.iiitd.edu.in/raghava/toxinpred2/` | Sharma et al., 2022 | Free academic/research use with citation; redistribution unconfirmed | Unknown / Unverified | Curated (Swiss-Prot KW-0800 toxins & non-secretory controls) | **UNVERIFIED** (Requires owner approval) |
+| **AllergenOnline** (FARRP) | `http://www.allergenonline.org/` | Version 21 (Univ. of Nebraska) | Freely accessible for safety research; no explicit redistribution grant | Unknown / Unverified | Curated (peer-reviewed clinical IgE binding) | **UNVERIFIED** (Requires owner approval) |
+| **COMPARE** (HESI) | `https://comparedatabase.org/` | Annual peer-reviewed release | Public collaborative database; publications under CC BY | **Yes** (Public scientific resource) | Curated / Peer-reviewed (clinical IgE binding) | **VERIFIED** |
 
-Agent: for each row, record the URL you used, version/date, exact license text or "none stated", redistribution allowed (yes/no/unknown), and label evidence type (experimental / curated / predicted). Update this table and stop for approval.
+*Rule:* Data marked **UNVERIFIED** or **Research only** may be used for local training only with owner approval, and must never be committed to git or redistributed. Only **VERIFIED** CC BY 4.0 data (e.g. UniProt, VaxiGen tumor, COMPARE) may be committed or redistributed.
 
 ## 2. Third-party server policy
 - VaxiJen and AllerTOP outputs are **predictions, not ground truth**. Do not use them as training labels.

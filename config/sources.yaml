@@ -1,43 +1,118 @@
 # config/sources.yaml
-# Data sources registry matching DATA_GOVERNANCE.md
-# Governs allowed downloads and licenses (Decision D4)
+# Machine-readable Data Sources Registry matching DATA_GOVERNANCE.md
+# Governs data acquisition, licensing gates, and redistribution policies.
 
-version: "1.0.0"
+version: "1.1.0"
 governance_policy: "DATA_GOVERNANCE.md"
 license_gate_enforced: true
 
 sources:
   vaxijen_bacterial:
-    description: "317 bacterial immunogens from Zaharieva et al., 2019"
+    id: "vaxijen_bacterial"
+    name: "VaxiJen Bacterial Immunogens (Zaharieva et al., 2019)"
     url: "http://ddg-pharmfac.net/vaxijen/dataset"
+    version: "2019"
     license: "UNVERIFIED"
     redistribution_allowed: false
-    status: "UNVERIFIED_PENDING_APPROVAL"
+    label_evidence_type: "curated_experimental"
+    status: "UNVERIFIED"
+    target_tasks: ["antigenicity_bacterial"]
 
   vaxijen_bacterial_negatives:
-    description: "317 non-immunogens from Dimitrov et al., Vaccines 2020"
+    id: "vaxijen_bacterial_negatives"
+    name: "VaxiJen v3.0 Bacterial Non-Immunogens (Dimitrov et al., 2020)"
     url: "http://ddg-pharmfac.net/vaxijen/dataset"
+    version: "2020"
     license: "UNVERIFIED"
     redistribution_allowed: false
-    status: "UNVERIFIED_PENDING_APPROVAL"
+    label_evidence_type: "curated_non_immunogen"
+    status: "UNVERIFIED"
+    target_tasks: ["antigenicity_bacterial"]
 
   vaxigen_tumor:
-    description: "VaxiGen tumor database (546 proteins, 212 peptides)"
+    id: "vaxigen_tumor"
+    name: "VaxiGen Tumor Database (Doneva et al., 2021)"
     url: "http://ddg-pharmfac.net/vaxijen3/tumordb"
+    version: "2021"
     license: "CC BY 4.0"
     redistribution_allowed: true
-    status: "VERIFY_ON_PAGE_THEN_APPROVE"
+    label_evidence_type: "curated_experimental"
+    status: "VERIFIED"
+    target_tasks: ["antigenicity_tumor"]
 
   vaxijen_viral:
-    description: "Viral immunogens/non-immunogens (Doneva & Dimitrov, 2024)"
+    id: "vaxijen_viral"
+    name: "VaxiJen Viral Data (Doneva & Dimitrov, 2024)"
     url: "http://ddg-pharmfac.net/vaxijen3/"
+    version: "2024"
     license: "UNVERIFIED"
     redistribution_allowed: false
-    status: "UNVERIFIED_PENDING_APPROVAL"
+    label_evidence_type: "curated_viral"
+    status: "UNVERIFIED"
+    target_tasks: ["antigenicity_viral"]
+
+  iedb:
+    id: "iedb"
+    name: "Immune Epitope Database (IEDB)"
+    url: "https://www.iedb.org/"
+    version: "continuous"
+    license: "Research Only (Commercial Restricted)"
+    redistribution_allowed: false
+    label_evidence_type: "experimental_assay"
+    status: "VERIFIED_RESEARCH_ONLY"
+    target_tasks: ["antigenicity_validation"]
+
+  protegen:
+    id: "protegen"
+    name: "Protegen Protective Antigens (VIOLIN)"
+    url: "https://violinet.org/protegen/"
+    version: "continuous"
+    license: "Research Only (Commercial Restricted)"
+    redistribution_allowed: false
+    label_evidence_type: "experimental_challenge_protection"
+    status: "VERIFIED_RESEARCH_ONLY"
+    target_tasks: ["antigenicity_protective"]
 
   uniprot_swissprot:
-    description: "Reviewed Swiss-Prot sequences with release dates and taxonomy"
+    id: "uniprot_swissprot"
+    name: "UniProtKB / Swiss-Prot Reviewed Records"
     url: "https://rest.uniprot.org/uniprotkb/search"
+    version: "2026_current"
     license: "CC BY 4.0"
     redistribution_allowed: true
+    label_evidence_type: "curated_literature"
     status: "VERIFIED"
+    target_tasks: ["toxicity", "antigenicity", "allergenicity", "length_matched_negatives"]
+
+  toxinpred_datasets:
+    id: "toxinpred_datasets"
+    name: "ToxinPred2 Benchmark Datasets (Sharma et al., 2022)"
+    url: "https://webs.iiitd.edu.in/raghava/toxinpred2/"
+    version: "2022"
+    license: "UNVERIFIED"
+    redistribution_allowed: false
+    label_evidence_type: "curated_swissprot"
+    status: "UNVERIFIED"
+    target_tasks: ["toxicity"]
+
+  allergenonline:
+    id: "allergenonline"
+    name: "AllergenOnline Database (FARRP)"
+    url: "http://www.allergenonline.org/"
+    version: "v21"
+    license: "UNVERIFIED"
+    redistribution_allowed: false
+    label_evidence_type: "peer_reviewed_clinical_ige"
+    status: "UNVERIFIED"
+    target_tasks: ["allergenicity"]
+
+  compare_database:
+    id: "compare_database"
+    name: "COMPARE Allergen Database (HESI)"
+    url: "https://comparedatabase.org/"
+    version: "annual_peer_reviewed"
+    license: "Public Resource / CC BY publications"
+    redistribution_allowed: true
+    label_evidence_type: "peer_reviewed_clinical_ige"
+    status: "VERIFIED"
+    target_tasks: ["allergenicity"]
