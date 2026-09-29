@@ -34,18 +34,18 @@ Maintained continuously per operating rule 3. Status: `todo` / `in-progress` / `
 | **2.3** | De-duplicate; resolve label conflicts | Removal log | done | `01e6934` | [`src/data/deduplication.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/deduplication.py) |
 | **2.4** | Build per-organism, length-matched negatives | Documented residual noise | done | `01e6934` | [`src/data/negatives.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/negatives.py) |
 | **2.5** | Data card per dataset | Cards complete | done | `01e6934` | [`docs/data_cards/DATA_CARD_EVALUATION_DATASET.md`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/docs/data_cards/DATA_CARD_EVALUATION_DATASET.md) (SHA256 verified) |
-| **GATE 2** | **Data cards and curation report approved** | **Sign-off on curated datasets** | **READY_FOR_APPROVAL** | — | Curation Pipeline & Data Card Delivered (49/49 tests green) |
+| **GATE 2** | **Data cards and curation report approved** | **Sign-off on curated datasets** | **done** | `7070566` | Approved by owner |
 
 ---
 
 ## WP3: Splits and Leakage Audit
 | ID | Task | Acceptance Criteria | Status | Commit | Evidence |
 |---|---|---|:---:|---|---|
-| **3.1** | Homology clustering; store cluster artifact | Versioned cluster artifact | todo | | `data/cluster_assignments.json` |
-| **3.2** | Grouped CV, family-out, source-out, temporal splits | Splits reproducible; test set frozen | todo | | |
-| **3.3** | Leakage gap on legacy models | Reported with CIs | todo | | |
-| **3.4** | Shortcut tests | All tests in EVALUATION_PROTOCOL §2 run | todo | | |
-| **GATE 3** | **Leakage report approved; grouped numbers headline** | **Sign-off on honest baseline** | **todo** | | |
+| **3.1** | Homology clustering; store cluster artifact | Versioned cluster artifact | done | `b3ae85b` | [`data/cluster_assignments.json`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/data/cluster_assignments.json) (437 clusters) |
+| **3.2** | Grouped CV, family-out, source-out, temporal splits | Splits reproducible; test set frozen | done | `b3ae85b` | [`scripts/run_phase1_evaluation.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/scripts/run_phase1_evaluation.py) |
+| **3.3** | Leakage gap on legacy models | Reported with CIs | done | `b3ae85b` | [`results/phase1_model_validity_report.json`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/results/phase1_model_validity_report.json), [`docs/MODEL_VALIDITY_REPORT_PHASE_1.md`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/docs/MODEL_VALIDITY_REPORT_PHASE_1.md) |
+| **3.4** | Shortcut tests | All tests in EVALUATION_PROTOCOL §2 run | done | `b3ae85b` | Permutation AUROC 0.5163, Length AUROC 0.4366, Adversarial AUROC 0.9989 |
+| **GATE 3** | **Leakage report approved; grouped numbers headline** | **Sign-off on honest baseline** | **READY_FOR_APPROVAL** | — | Leakage Report Delivered (Grouped CV as New Headline) |
 
 ---
 
