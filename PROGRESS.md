@@ -7,12 +7,12 @@ Maintained continuously per operating rule 3. Status: `todo` / `in-progress` / `
 ## WP0: Setup, Audit, Baseline Freeze
 | ID | Task | Acceptance Criteria | Status | Commit | Evidence |
 |---|---|---|:---:|---|---|
-| **0.1** | Inventory repo, models, data, configs, CI | Audit summary produced; fix inaccuracies in TECH_SPEC | in-progress | | Measured tree structures, data inventory, corrected TECH_SPEC.md |
-| **0.2** | Pin environment | Lockfile; clean reproducible build | todo | | |
-| **0.3** | Reproduce claimed metrics as legacy baseline | Exact match in versioned results file | todo | | `results/legacy_baseline_metrics.json` |
-| **0.4** | Relabel 5 biological controls as smoke tests | Code and docs updated | todo | | `tests/test_pipeline.py`, `README.md` |
-| **0.5** | Create config skeleton; fill AGENTS.md commands | Files exist and verify | todo | | `BLOCKERS.md`, `PROGRESS.md`, `config/` |
-| **GATE 0** | **Audit report & legacy baseline approved** | **Owner sign-off to proceed to WP1** | **todo** | | |
+| **0.1** | Inventory repo, models, data, configs, CI | Audit summary produced; fix inaccuracies in TECH_SPEC | done | `ae51441` | [TECH_SPEC.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/TECH_SPEC.md), [docs/AUDIT_REPORT_PHASE_0.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/docs/AUDIT_REPORT_PHASE_0.md) |
+| **0.2** | Pin environment | Lockfile; clean reproducible build | done | `6abcf59` | [requirements.lock](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/requirements.lock) (32/32 tests green) |
+| **0.3** | Reproduce claimed metrics as legacy baseline | Exact match in versioned results file | done | `b14c8f8` | [results/legacy_baseline_metrics.json](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/results/legacy_baseline_metrics.json), [scripts/reproduce_legacy_baseline.py](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/scripts/reproduce_legacy_baseline.py) |
+| **0.4** | Relabel 5 biological controls as smoke tests | Code and docs updated | done | `9abbcd2` | [tests/test_pipeline.py](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_pipeline.py), [README.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/README.md) |
+| **0.5** | Create config skeleton; fill AGENTS.md commands | Files exist and verify | done | `9abbcd2` | [BLOCKERS.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/BLOCKERS.md), [AGENTS.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/AGENTS.md), [config/](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/config/) |
+| **GATE 0** | **Audit report & legacy baseline approved** | **Owner sign-off to proceed to WP1** | **READY_FOR_APPROVAL** | — | Audit Report & Baseline Delivered |
 
 ---
 
