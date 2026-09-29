@@ -22,19 +22,19 @@ Maintained continuously per operating rule 3. Status: `todo` / `in-progress` / `
 | **1.1** | Complete source registry | All rows verified or UNVERIFIED with reason | done | `e4b1d28` | [DATA_GOVERNANCE.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/DATA_GOVERNANCE.md), [config/sources.yaml](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/config/sources.yaml) |
 | **1.2** | Implement provenance schema | Schema enforced in loaders | done | `e4b1d28` | [`src/data/governance.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/governance.py) |
 | **1.3** | Implement license gate | UNVERIFIED data blocked without approval | done | `e4b1d28` | [`src/data/governance.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/governance.py), [`tests/test_governance.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_governance.py) (8/8 tests green) |
-| **GATE 1** | **Owner approves sources and usage** | **Sign-off on allowed sources** | **READY_FOR_APPROVAL** | — | Source Registry & License Gate Delivered |
+| **GATE 1** | **Owner approves sources and usage** | **Sign-off on allowed sources** | **done** | `522a56a` | Approved by owner |
 
 ---
 
 ## WP2: Acquisition and Curation
 | ID | Task | Acceptance Criteria | Status | Commit | Evidence |
 |---|---|---|:---:|---|---|
-| **2.1** | Ingest approved sources | Loaders with provenance tracking | todo | | |
-| **2.2** | Sanitize with alteration log | Logs and flags tested | todo | | |
-| **2.3** | De-duplicate; resolve label conflicts | Removal log | todo | | |
-| **2.4** | Build per-organism, length-matched negatives | Documented residual noise | todo | | |
-| **2.5** | Data card per dataset | Cards complete | todo | | |
-| **GATE 2** | **Data cards and curation report approved** | **Sign-off on curated datasets** | **todo** | | |
+| **2.1** | Ingest approved sources | Loaders with provenance tracking | done | `01e6934` | [`src/data/loaders.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/loaders.py) |
+| **2.2** | Sanitize with alteration log | Logs and flags tested | done | `01e6934` | [`src/data/sanitizer.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/sanitizer.py) |
+| **2.3** | De-duplicate; resolve label conflicts | Removal log | done | `01e6934` | [`src/data/deduplication.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/deduplication.py) |
+| **2.4** | Build per-organism, length-matched negatives | Documented residual noise | done | `01e6934` | [`src/data/negatives.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/negatives.py) |
+| **2.5** | Data card per dataset | Cards complete | done | `01e6934` | [`docs/data_cards/DATA_CARD_EVALUATION_DATASET.md`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/docs/data_cards/DATA_CARD_EVALUATION_DATASET.md) (SHA256 verified) |
+| **GATE 2** | **Data cards and curation report approved** | **Sign-off on curated datasets** | **READY_FOR_APPROVAL** | — | Curation Pipeline & Data Card Delivered (49/49 tests green) |
 
 ---
 
