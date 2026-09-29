@@ -52,9 +52,9 @@ Maintained continuously per operating rule 3. Status: `todo` / `in-progress` / `
 ## WP4: Features
 | ID | Task | Acceptance Criteria | Status | Commit | Evidence |
 |---|---|---|:---:|---|---|
-| **4.1** | AAC, dipeptide, k-mer, ACC, PCP versioned | Unit tests passing | todo | | |
-| **4.2** | Optional PLM embeddings feasibility assessment | Decision recorded | todo | | |
-| **4.3** | Feature-parity tests | Golden vectors identical train vs serve | todo | | |
+| **4.1** | AAC, dipeptide, k-mer, ACC, PCP versioned | Unit tests passing | done | `b188648` | [`src/features/`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/features/) (AAC, DPC, Kmer, ACC, PCP) |
+| **4.2** | Optional PLM embeddings feasibility assessment | Decision recorded | done | `b188648` | [`src/features/plm.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/features/plm.py) |
+| **4.3** | Feature-parity tests | Golden vectors identical train vs serve | done | `b188648` | [`tests/test_features.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_features.py) (8/8 parity tests green) |
 
 ---
 
