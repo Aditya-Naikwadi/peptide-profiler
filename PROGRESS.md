@@ -12,17 +12,17 @@ Maintained continuously per operating rule 3. Status: `todo` / `in-progress` / `
 | **0.3** | Reproduce claimed metrics as legacy baseline | Exact match in versioned results file | done | `b14c8f8` | [results/legacy_baseline_metrics.json](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/results/legacy_baseline_metrics.json), [scripts/reproduce_legacy_baseline.py](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/scripts/reproduce_legacy_baseline.py) |
 | **0.4** | Relabel 5 biological controls as smoke tests | Code and docs updated | done | `9abbcd2` | [tests/test_pipeline.py](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_pipeline.py), [README.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/README.md) |
 | **0.5** | Create config skeleton; fill AGENTS.md commands | Files exist and verify | done | `9abbcd2` | [BLOCKERS.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/BLOCKERS.md), [AGENTS.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/AGENTS.md), [config/](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/config/) |
-| **GATE 0** | **Audit report & legacy baseline approved** | **Owner sign-off to proceed to WP1** | **READY_FOR_APPROVAL** | — | Audit Report & Baseline Delivered |
+| **GATE 0** | **Audit report & legacy baseline approved** | **Owner sign-off to proceed to WP1** | **done** | `6c81222` | Approved by owner |
 
 ---
 
 ## WP1: Data Governance
 | ID | Task | Acceptance Criteria | Status | Commit | Evidence |
 |---|---|---|:---:|---|---|
-| **1.1** | Complete source registry | All rows verified or UNVERIFIED with reason | todo | | `DATA_GOVERNANCE.md` |
-| **1.2** | Implement provenance schema | Schema enforced in loaders | todo | | |
-| **1.3** | Implement license gate | UNVERIFIED data blocked without approval | todo | | |
-| **GATE 1** | **Owner approves sources and usage** | **Sign-off on allowed sources** | **todo** | | |
+| **1.1** | Complete source registry | All rows verified or UNVERIFIED with reason | done | `e4b1d28` | [DATA_GOVERNANCE.md](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/DATA_GOVERNANCE.md), [config/sources.yaml](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/config/sources.yaml) |
+| **1.2** | Implement provenance schema | Schema enforced in loaders | done | `e4b1d28` | [`src/data/governance.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/governance.py) |
+| **1.3** | Implement license gate | UNVERIFIED data blocked without approval | done | `e4b1d28` | [`src/data/governance.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/data/governance.py), [`tests/test_governance.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_governance.py) (8/8 tests green) |
+| **GATE 1** | **Owner approves sources and usage** | **Sign-off on allowed sources** | **READY_FOR_APPROVAL** | — | Source Registry & License Gate Delivered |
 
 ---
 
