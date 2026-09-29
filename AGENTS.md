@@ -39,8 +39,8 @@ What changed · what was measured (numbers with confidence intervals) · what su
 
 ## Commands
 Fill these in during WP0 after reading the repo. Do not guess.
-- Install: `TODO`
-- Run tests: `TODO`
+- Install: `uv pip install -r requirements.lock` (or `pip install -r requirements.lock`)
+- Run tests: `pytest tests/` (or `.\.venv\Scripts\pytest tests/`)
 - Run CLI: `python src/cli.py -i input.fa -o report.csv --format all`
 - Run app: `streamlit run app.py`
 

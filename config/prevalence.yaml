@@ -1,0 +1,18 @@
+# config/prevalence.yaml
+# Natural and deployment prevalence estimates across screening tasks
+# All values are OWNER-INPUT placeholders (Decision D1 in BLOCKERS.md)
+
+version: "1.0.0"
+status: "DRAFT_PENDING_OWNER_INPUT"
+
+default_deployment_prevalence:
+  toxicity: 0.01      # 1% natural prevalence in human/microbial proteomes (OWNER-INPUT)
+  allergenicity: 0.02 # 2% natural prevalence (OWNER-INPUT)
+  antigenicity: 0.05  # 5% natural prevalence among surface/secreted proteins (OWNER-INPUT)
+
+evaluation_prevalence_grid:
+  - 0.01 # 1% (Rare event baseline)
+  - 0.02 # 2%
+  - 0.03 # 3%
+  - 0.05 # 5%
+  - 0.10 # 10%

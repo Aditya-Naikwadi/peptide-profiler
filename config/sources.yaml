@@ -1,0 +1,43 @@
+# config/sources.yaml
+# Data sources registry matching DATA_GOVERNANCE.md
+# Governs allowed downloads and licenses (Decision D4)
+
+version: "1.0.0"
+governance_policy: "DATA_GOVERNANCE.md"
+license_gate_enforced: true
+
+sources:
+  vaxijen_bacterial:
+    description: "317 bacterial immunogens from Zaharieva et al., 2019"
+    url: "http://ddg-pharmfac.net/vaxijen/dataset"
+    license: "UNVERIFIED"
+    redistribution_allowed: false
+    status: "UNVERIFIED_PENDING_APPROVAL"
+
+  vaxijen_bacterial_negatives:
+    description: "317 non-immunogens from Dimitrov et al., Vaccines 2020"
+    url: "http://ddg-pharmfac.net/vaxijen/dataset"
+    license: "UNVERIFIED"
+    redistribution_allowed: false
+    status: "UNVERIFIED_PENDING_APPROVAL"
+
+  vaxigen_tumor:
+    description: "VaxiGen tumor database (546 proteins, 212 peptides)"
+    url: "http://ddg-pharmfac.net/vaxijen3/tumordb"
+    license: "CC BY 4.0"
+    redistribution_allowed: true
+    status: "VERIFY_ON_PAGE_THEN_APPROVE"
+
+  vaxijen_viral:
+    description: "Viral immunogens/non-immunogens (Doneva & Dimitrov, 2024)"
+    url: "http://ddg-pharmfac.net/vaxijen3/"
+    license: "UNVERIFIED"
+    redistribution_allowed: false
+    status: "UNVERIFIED_PENDING_APPROVAL"
+
+  uniprot_swissprot:
+    description: "Reviewed Swiss-Prot sequences with release dates and taxonomy"
+    url: "https://rest.uniprot.org/uniprotkb/search"
+    license: "CC BY 4.0"
+    redistribution_allowed: true
+    status: "VERIFIED"
