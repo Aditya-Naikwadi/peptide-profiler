@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "description": "Legacy baseline scores on sample reference peptides (8 biological controls)",
+    "source_file": "examples/sample_peptides.fa",
+    "pipeline_version": "legacy_v1.0",
+    "evaluation_mode": "smoke_test_only",
+    "warning": "These 8 sequences are canonical biological controls present in upstream training databases. They verify pipeline functionality (smoke test), NOT generalizable validation accuracy."
+  },
+  "candidates": [
+    {
+      "id": "Ubiquitin_Host_NonAntigen",
+      "length": 76,
+      "antigenicity": {
+        "score": 0.26,
+        "is_antigen": false,
+        "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+      },
+      "toxicity": {
+        "score": 0.272,
+        "is_toxic": false,
+        "method": "ToxinPred2 (ONNX RF Model)"
+      },
+      "allergenicity": {
+        "score": 0.26,
+        "is_allergen": false,
+        "method": "Local ACC-based Classifier (Pfeature descriptors)"
+      },
+      "desirability": {
+        "score": 0.1401,
+        "candidate_type": "vaccine",
+        "rank": 1
+      },
+      "stability_index": 36.06,
+      "is_stable": true
+    },
+    {
+      "id": "OspA_Bacterial_Antigen",
+      "length": 56,
+      "antigenicity": {
+        "score": 0.79,
+        "is_antigen": true,
+        "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+      },
+      "toxicity": {
+        "score": 0.488,
+        "is_toxic": false,
+        "method": "ToxinPred2 (ONNX RF Model)"
+      },
+      "allergenicity": {
+        "score": 0.73,
+        "is_allergen": true,
+        "method": "Local ACC-based Classifier (Pfeature descriptors)"
+      },
+      "desirability": {
+        "score": 0.1092,
+        "candidate_type": "vaccine",
+        "rank": 2
+      },
+      "stability_index": 16.44,
+      "is_stable": true
+    },
+    {
+      "id": "Melittin_Bee_Venom_Toxin",
+      "length": 26,
+      "antigenicity": {
+        "score": 0.53,
+        "is_antigen": true,
+        "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+      },
+      "toxicity": {
+        "score": 0.65,
+        "is_toxic": true,
+        "method": "ToxinPred2 (ONNX RF Model)"
+      },
+      "allergenicity": {
+        "score": 0.46,
+        "is_allergen": false,
+        "method": "Local ACC-based Classifier (Pfeature descriptors)"
+      },
+      "desirability": {
+        "score": 0.1002,
+        "candidate_type": "vaccine",
+        "rank": 3
+      },
+      "stability_index": 44.73,
+      "is_stable": false
+    },
+    {
+      "id": "Exendin_4_Therapeutic_Peptide",
+      "length": 39,
+      "antigenicity": {
+        "score": 0.27,
+        "is_antigen": false,
+        "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+      },
+      "toxicity": {
+        "score": 0.351,
+        "is_toxic": false,
+        "method": "ToxinPred2 (ONNX RF Model)"
+      },
+      "allergenicity": {
+        "score": 0.53,
+        "is_allergen": true,
+        "method": "Local ACC-based Classifier (Pfeature descriptors)"
+      },
+      "desirability": {
+        "score": 0.0824,
+        "candidate_type": "vaccine",
+        "rank": 4
+      },
+      "stability_index": 64.08,
+      "is_stable": false
+    },
+    {
+      "id": "Ara_h_1_Peanut_Allergen",
+      "length": 57,
+      "antigenicity": {
+        "score": 0.45,
+        "is_antigen": false,
+        "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+      },
+      "toxicity": {
+        "score": 0.449,
+        "is_toxic": false,
+        "method": "ToxinPred2 (ONNX RF Model)"
+      },
+      "allergenicity": {
+        "score": 0.72,
+        "is_allergen": true,
+        "method": "Local ACC-based Classifier (Pfeature descriptors)"
+      },
+      "desirability": {
+        "score": 0.0694,
+        "candidate_type": "vaccine",
+        "rank": 5
+      },
+      "stability_index": 94.1,
+      "is_stable": false
+    },
+    {
+      "id": "Bet_v_1_Birch_Allergen",
+      "length": 159,
+      "antigenicity": {
+        "score": 0.23,
+        "is_antigen": false,
+        "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+      },
+      "toxicity": {
+        "score": 0.263,
+        "is_toxic": false,
+        "method": "ToxinPred2 (ONNX RF Model)"
+      },
+      "allergenicity": {
+        "score": 0.64,
+        "is_allergen": true,
+        "method": "Local ACC-based Classifier (Pfeature descriptors)"
+      },
+      "desirability": {
+        "score": 0.061,
+        "candidate_type": "vaccine",
+        "rank": 6
+      },
+      "stability_index": 22.59,
+      "is_stable": true
+    },
+    {
+      "id": "Spike_RBD_Viral_Antigen",
+      "length": 208,
+      "antigenicity": {
+        "score": 0.41,
+        "is_antigen": false,
+        "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+      },
+      "toxicity": {
+        "score": 0.562,
+        "is_toxic": false,
+        "method": "ToxinPred2 (ONNX RF Model)"
+      },
+      "allergenicity": {
+        "score": 0.69,
+        "is_allergen": true,
+        "method": "Local ACC-based Classifier (Pfeature descriptors)"
+      },
+      "desirability": {
+        "score": 0.0557,
+        "candidate_type": "vaccine",
+        "rank": 7
+      },
+      "stability_index": 18.92,
+      "is_stable": true
+    },
+    {
+      "id": "Conotoxin_Neurotoxin",
+      "length": 25,
+      "antigenicity": {
+        "score": 0.4,
+        "is_antigen": false,
+        "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+      },
+      "toxicity": {
+        "score": 0.975,
+        "is_toxic": true,
+        "method": "ToxinPred2 (ONNX RF Model)"
+      },
+      "allergenicity": {
+        "score": 0.37,
+        "is_allergen": false,
+        "method": "Local ACC-based Classifier (Pfeature descriptors)"
+      },
+      "desirability": {
+        "score": 0.0063,
+        "candidate_type": "vaccine",
+        "rank": 8
+      },
+      "stability_index": 59.53,
+      "is_stable": false
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peptide Profiler Report (VaxiJen-Alternative)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --surface: #161b22;
+            --surface-hover: #1c2128;
+            --border: #30363d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --success: #238636;
+            --warning: #d29922;
+            --danger: #da3633;
+            --info: #1f6feb;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, sans-serif;
+            padding: 30px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #58a6ff, #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .metric-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .metric-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+        .metric-title {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .metric-value {
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 8px;
+            color: #ffffff;
+        }
+        .table-container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left;
+        }
+        th {
+            background: rgba(22, 27, 34, 0.95);
+            padding: 14px 16px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+        tr:hover td {
+            background: var(--surface-hover);
+        }
+        .seq-cell {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #79c0ff;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .badge-success { background: rgba(35, 134, 54, 0.2); color: #3fb950; border: 1px solid #238636; }
+        .badge-danger { background: rgba(218, 54, 51, 0.2); color: #f85149; border: 1px solid #da3633; }
+        .badge-warning { background: rgba(210, 153, 34, 0.2); color: #e3b341; border: 1px solid #d29922; }
+        .badge-info { background: rgba(31, 111, 235, 0.2); color: #58a6ff; border: 1px solid #1f6feb; }
+        .badge-muted { background: rgba(139, 148, 158, 0.15); color: #8b949e; border: 1px solid #30363d; }
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(110, 118, 129, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Peptide Characterization Report</h1>
+                <div class="subtitle">Open-Source Pipeline: Antigenicity (VaxiJen-alt) • Toxicity (ToxinPred2) • Allergenicity (AllerTOP-alt) • Physicochemical Properties</div>
+            </div>
+            <div>
+                <span class="badge badge-info">Candidates: 8</span>
+            </div>
+        </header>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">Total Sequences</div>
+                <div class="metric-value">8</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Antigenic Peptides</div>
+                <div class="metric-value" style="color: #3fb950;">2</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Non-Toxic Peptides</div>
+                <div class="metric-value" style="color: #58a6ff;">6</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Non-Allergenic Peptides</div>
+                <div class="metric-value" style="color: #e3b341;">3</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>ID</th>
+                        <th>Sequence</th>
+                        <th>Mol Wt</th>
+                        <th>GRAVY</th>
+                        <th>Stability</th>
+                        <th>Antigenicity</th>
+                        <th>Toxicity</th>
+                        <th>Allergenicity</th>
+                        <th>Desirability</th>
+                        <th>Epitopes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td><strong>#1</strong></td>
+            <td><code>Ubiquitin_Host_NonAntigen</code></td>
+            <td class="seq-cell" title="MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG">MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</td>
+            <td>8564.74 Da</td>
+            <td>-0.489</td>
+            <td>36.06 (Stable)</td>
+            <td><span class="badge badge-muted">Non-antigen (0.26)</span></td>
+            <td><span class="badge badge-success">Non-toxic (0.27)</span></td>
+            <td><span class="badge badge-success">Non-allergen (0.26)</span></td>
+            <td><strong>0.1401</strong></td>
+            <td><span class="badge badge-info">6 Epitopes</span></td>
+        </tr>
+        
+
+        <tr>
+            <td><strong>#2</strong></td>
+            <td><code>OspA_Bacterial_Antigen</code></td>
+            <td class="seq-cell" title="MKTLLILAVVAAALASGCSSVSAKDQQTLNQLISKLNKVLLDNDNDQTLKVVKNAK">MKTLLILAVVAAALASGCSSVSAKDQQTLNQLISKLNKVLLDNDNDQTLKVVKNAK</td>
+            <td>5938.91 Da</td>
+            <td>0.177</td>
+            <td>16.44 (Stable)</td>
+            <td><span class="badge badge-success">Antigen (0.79)</span></td>
+            <td><span class="badge badge-success">Non-toxic (0.49)</span></td>
+            <td><span class="badge badge-warning">Allergen (0.73)</span></td>
+            <td><strong>0.1092</strong></td>
+            <td><span class="badge badge-info">4 Epitopes</span></td>
+        </tr>
+        
+
+        <tr>
+            <td><strong>#3</strong></td>
+            <td><code>Melittin_Bee_Venom_Toxin</code></td>
+            <td class="seq-cell" title="GIGAVLKVLTTGLPALISWIKRKRQQ">GIGAVLKVLTTGLPALISWIKRKRQQ</td>
+            <td>2847.45 Da</td>
+            <td>0.273</td>
+            <td>44.73 (Unstable)</td>
+            <td><span class="badge badge-success">Antigen (0.53)</span></td>
+            <td><span class="badge badge-danger">Toxic (0.65)</span></td>
+            <td><span class="badge badge-success">Non-allergen (0.46)</span></td>
+            <td><strong>0.1002</strong></td>
+            <td><span class="badge badge-info">1 Epitopes</span></td>
+        </tr>
+        
+
+        <tr>
+            <td><strong>#4</strong></td>
+            <td><code>Exendin_4_Therapeutic_Peptide</code></td>
+            <td class="seq-cell" title="HGEGTFTSDLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS">HGEGTFTSDLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS</td>
+            <td>4187.56 Da</td>
+            <td>-0.692</td>
+            <td>64.08 (Unstable)</td>
+            <td><span class="badge badge-muted">Non-antigen (0.27)</span></td>
+            <td><span class="badge badge-success">Non-toxic (0.35)</span></td>
+            <td><span class="badge badge-warning">Allergen (0.53)</span></td>
+            <td><strong>0.0824</strong></td>
+            <td><span class="badge badge-info">3 Epitopes</span></td>
+        </tr>
+        
+
+        <tr>
+            <td><strong>#5</strong></td>
+            <td><code>Ara_h_1_Peanut_Allergen</code></td>
+            <td class="seq-cell" title="MSASSSSARVLVPALLALLVLTAAAPASADSQFRGPRGPPTQQSQSQEPELQRQQRQ">MSASSSSARVLVPALLALLVLTAAAPASADSQFRGPRGPPTQQSQSQEPELQRQQRQ</td>
+            <td>6015.69 Da</td>
+            <td>-0.411</td>
+            <td>94.1 (Unstable)</td>
+            <td><span class="badge badge-muted">Non-antigen (0.45)</span></td>
+            <td><span class="badge badge-success">Non-toxic (0.45)</span></td>
+            <td><span class="badge badge-warning">Allergen (0.72)</span></td>
+            <td><strong>0.0694</strong></td>
+            <td><span class="badge badge-info">4 Epitopes</span></td>
+        </tr>
+        
+
+        <tr>
+            <td><strong>#6</strong></td>
+            <td><code>Bet_v_1_Birch_Allergen</code></td>
+            <td class="seq-cell" title="GVFNYETETTSVIPAARLFKAFILDGDNLFPKVAPQAISSVENIEGNGGPGTIKKISFPEGFPFKYVKDRVDEVDHTNFKYNYSVIEGGPIGDTLEKISNEIKIVATPDGGSILKISNKYHTKGDHEVKAEQVKASKEMGETLLRAVESYLLAHSDAYN">GVFNYETETTSVIPAARLFKAFILDGDNLFPKVAPQAISSVENIEGNGGPGTIKKISFPEGFPFKYVKDRVDEVDHTNFKYNYSVIEGGPIGDTLEKISNEIKIVATPDGGSILKISNKYHTKGDHEVKAEQVKASKEMGETLLRAVESYLLAHSDAYN</td>
+            <td>17439.4 Da</td>
+            <td>-0.372</td>
+            <td>22.59 (Stable)</td>
+            <td><span class="badge badge-muted">Non-antigen (0.23)</span></td>
+            <td><span class="badge badge-success">Non-toxic (0.26)</span></td>
+            <td><span class="badge badge-warning">Allergen (0.64)</span></td>
+            <td><strong>0.0610</strong></td>
+            <td><span class="badge badge-info">15 Epitopes</span></td>
+        </tr>
+        
+
+        <tr>
+            <td><strong>#7</strong></td>
+            <td><code>Spike_RBD_Viral_Antigen</code></td>
+            <td class="seq-cell" title="NLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNF">NLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNF</td>
+            <td>23359.12 Da</td>
+            <td>-0.255</td>
+            <td>18.92 (Stable)</td>
+            <td><span class="badge badge-muted">Non-antigen (0.41)</span></td>
+            <td><span class="badge badge-success">Non-toxic (0.56)</span></td>
+            <td><span class="badge badge-warning">Allergen (0.69)</span></td>
+            <td><strong>0.0557</strong></td>
+            <td><span class="badge badge-info">22 Epitopes</span></td>
+        </tr>
+        
+
+        <tr>
+            <td><strong>#8</strong></td>
+            <td><code>Conotoxin_Neurotoxin</code></td>
+            <td class="seq-cell" title="CKGKGAKCSRLMYDCCTGSCRSGKC">CKGKGAKCSRLMYDCCTGSCRSGKC</td>
+            <td>2646.17 Da</td>
+            <td>-0.464</td>
+            <td>59.53 (Unstable)</td>
+            <td><span class="badge badge-muted">Non-antigen (0.40)</span></td>
+            <td><span class="badge badge-danger">Toxic (0.97)</span></td>
+            <td><span class="badge badge-success">Non-allergen (0.37)</span></td>
+            <td><strong>0.0063</strong></td>
+            <td><span class="badge badge-info">1 Epitopes</span></td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            Generated by Open-Source Peptide Characterization Pipeline • Powered by Biopython, Pfeature, ToxinPred2 & VaxiJen ML
+        </footer>
+    </div>
+</body>
+</html>

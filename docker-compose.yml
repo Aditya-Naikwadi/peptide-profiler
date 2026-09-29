@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  peptide-profiler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: peptide-profiler-app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./examples:/app/examples
+    entrypoint: ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+  vaxign-ml:
+    image: e4ong1031/vaxign-ml:v1.0
+    container_name: vaxign-ml-service
+    volumes:
+      - ./data:/data
+    entrypoint: ["/bin/bash"]
+    stdin_open: true
+    tty: true

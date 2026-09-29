@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WetLabAssayFeedbackRecord",
+  "description": "Schema for recording wet-lab biological validation assay outcomes paired with model predictions, stratified sampling, and selection bias mitigation",
+  "type": "object",
+  "required": [
+    "assay_id",
+    "sequence_id",
+    "sequence",
+    "assay_date",
+    "assay_type",
+    "assay_readout",
+    "ground_truth_label",
+    "model_metadata",
+    "predicted_scores",
+    "selection_sampling_stratum"
+  ],
+  "properties": {
+    "assay_id": {
+      "type": "string",
+      "description": "Unique identifier for the experimental wet-lab run"
+    },
+    "sequence_id": {
+      "type": "string"
+    },
+    "sequence": {
+      "type": "string",
+      "pattern": "^[ACDEFGHIKLMNPQRSTVWY]+$"
+    },
+    "assay_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "assay_type": {
+      "type": "string",
+      "enum": [
+        "CYTOTOXICITY_MTT",
+        "HEMOLYTIC_ASSAY",
+        "ELISA_ANTIGEN_BINDING",
+        "IGE_ALLERGENICITY_ASSAY",
+        "NEUTRALIZATION_ASSAY",
+        "IN_VIVO_MOUSE_LETHALITY"
+      ]
+    },
+    "assay_readout": {
+      "type": "object",
+      "properties": {
+        "metric_name": {"type": "string"},
+        "value": {"type": "number"},
+        "units": {"type": "string"},
+        "concentration_um": {"type": "number"},
+        "replicate_count": {"type": "integer"}
+      },
+      "required": ["metric_name", "value", "units"]
+    },
+    "ground_truth_label": {
+      "type": "string",
+      "enum": ["ACTIVE_HAZARD", "INACTIVE_SAFE", "POTENT_LEAD", "INACTIVE_LEAD"]
+    },
+    "selection_sampling_stratum": {
+      "type": "string",
+      "enum": [
+        "TOP_RANKED_LEAD",
+        "BORDERLINE_UNCERTAIN",
+        "RANDOM_EXPLORATORY_CONTROL",
+        "STRATIFIED_LOWER_RANKED"
+      ],
+      "description": "Stratum used to select sequence for synthesis. Crucial to mitigate survivorship bias."
+    },
+    "model_metadata": {
+      "type": "object",
+      "properties": {
+        "pipeline_version": {"type": "string"},
+        "screening_profile": {"type": "string"},
+        "calibration_set_id": {"type": "string"},
+        "model_hashes": {"type": "object"}
+      }
+    },
+    "predicted_scores": {
+      "type": "object",
+      "properties": {
+        "toxicity_score": {"type": "number"},
+        "toxicity_calibrated": {"type": "number"},
+        "allergenicity_score": {"type": "number"},
+        "allergenicity_calibrated": {"type": "number"},
+        "antigenicity_score": {"type": "number"},
+        "antigenicity_calibrated": {"type": "number"},
+        "desirability_score": {"type": "number"},
+        "conservative_rank_score": {"type": "number"},
+        "candidate_status": {"type": "string"}
+      },
+      "required": ["toxicity_score", "desirability_score", "candidate_status"]
+    }
+  }
+}

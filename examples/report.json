@@ -1,0 +1,738 @@
+[
+  {
+    "id": "Ubiquitin_Host_NonAntigen",
+    "sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+    "antigenicity": {
+      "score": 0.26,
+      "is_antigen": false,
+      "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+    },
+    "allergenicity": {
+      "score": 0.26,
+      "is_allergen": false,
+      "method": "Local ACC-based Classifier (Pfeature descriptors)"
+    },
+    "toxicity": {
+      "score": 0.272,
+      "is_toxic": false,
+      "method": "ToxinPred2 (ONNX RF Model)"
+    },
+    "physicochemical": {
+      "mol_weight": 8564.74,
+      "gravy": -0.489,
+      "instability_index": 36.06,
+      "is_stable": true,
+      "isoelectric_point": 6.56,
+      "charge_at_pH7": -0.4,
+      "aromaticity": 0.039,
+      "secondary_structure": {
+        "helix": 0.329,
+        "turn": 0.25,
+        "sheet": 0.395
+      }
+    },
+    "desirability": {
+      "score": 0.1401,
+      "candidate_type": "vaccine",
+      "rank": 1
+    },
+    "epitopes": {
+      "count": 6,
+      "regions": [
+        {
+          "start": 1,
+          "end": 11,
+          "length": 11,
+          "sequence": "MQIFVKTLTGK",
+          "mean_score": 1.063
+        },
+        {
+          "start": 11,
+          "end": 21,
+          "length": 11,
+          "sequence": "KTITLEVEPSD",
+          "mean_score": 1.05
+        },
+        {
+          "start": 17,
+          "end": 23,
+          "length": 7,
+          "sequence": "VEPSDTI",
+          "mean_score": 1.034
+        },
+        {
+          "start": 22,
+          "end": 32,
+          "length": 11,
+          "sequence": "TIENVKAKIQD",
+          "mean_score": 1.024
+        },
+        {
+          "start": 35,
+          "end": 51,
+          "length": 17,
+          "sequence": "GIPPDQQRLIFAGKQLE",
+          "mean_score": 1.041
+        },
+        {
+          "start": 61,
+          "end": 76,
+          "length": 16,
+          "sequence": "IQKESTLHLVLRLRGG",
+          "mean_score": 1.108
+        }
+      ]
+    }
+  },
+  {
+    "id": "OspA_Bacterial_Antigen",
+    "sequence": "MKTLLILAVVAAALASGCSSVSAKDQQTLNQLISKLNKVLLDNDNDQTLKVVKNAK",
+    "antigenicity": {
+      "score": 0.79,
+      "is_antigen": true,
+      "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+    },
+    "allergenicity": {
+      "score": 0.73,
+      "is_allergen": true,
+      "method": "Local ACC-based Classifier (Pfeature descriptors)"
+    },
+    "toxicity": {
+      "score": 0.488,
+      "is_toxic": false,
+      "method": "ToxinPred2 (ONNX RF Model)"
+    },
+    "physicochemical": {
+      "mol_weight": 5938.91,
+      "gravy": 0.177,
+      "instability_index": 16.44,
+      "is_stable": true,
+      "isoelectric_point": 9.36,
+      "charge_at_pH7": 2.49,
+      "aromaticity": 0.0,
+      "secondary_structure": {
+        "helix": 0.446,
+        "turn": 0.268,
+        "sheet": 0.375
+      }
+    },
+    "desirability": {
+      "score": 0.1092,
+      "candidate_type": "vaccine",
+      "rank": 2
+    },
+    "epitopes": {
+      "count": 4,
+      "regions": [
+        {
+          "start": 1,
+          "end": 27,
+          "length": 27,
+          "sequence": "MKTLLILAVVAAALASGCSSVSAKDQQ",
+          "mean_score": 1.125
+        },
+        {
+          "start": 23,
+          "end": 29,
+          "length": 7,
+          "sequence": "AKDQQTL",
+          "mean_score": 1.007
+        },
+        {
+          "start": 26,
+          "end": 45,
+          "length": 20,
+          "sequence": "QQTLNQLISKLNKVLLDNDN",
+          "mean_score": 1.057
+        },
+        {
+          "start": 45,
+          "end": 56,
+          "length": 12,
+          "sequence": "NDQTLKVVKNAK",
+          "mean_score": 1.079
+        }
+      ]
+    }
+  },
+  {
+    "id": "Melittin_Bee_Venom_Toxin",
+    "sequence": "GIGAVLKVLTTGLPALISWIKRKRQQ",
+    "antigenicity": {
+      "score": 0.53,
+      "is_antigen": true,
+      "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+    },
+    "allergenicity": {
+      "score": 0.46,
+      "is_allergen": false,
+      "method": "Local ACC-based Classifier (Pfeature descriptors)"
+    },
+    "toxicity": {
+      "score": 0.65,
+      "is_toxic": true,
+      "method": "ToxinPred2 (ONNX RF Model)"
+    },
+    "physicochemical": {
+      "mol_weight": 2847.45,
+      "gravy": 0.273,
+      "instability_index": 44.73,
+      "is_stable": false,
+      "isoelectric_point": 12.0,
+      "charge_at_pH7": 4.76,
+      "aromaticity": 0.038,
+      "secondary_structure": {
+        "helix": 0.346,
+        "turn": 0.192,
+        "sheet": 0.462
+      }
+    },
+    "desirability": {
+      "score": 0.1002,
+      "candidate_type": "vaccine",
+      "rank": 3
+    },
+    "epitopes": {
+      "count": 1,
+      "regions": [
+        {
+          "start": 1,
+          "end": 23,
+          "length": 23,
+          "sequence": "GIGAVLKVLTTGLPALISWIKRK",
+          "mean_score": 1.088
+        }
+      ]
+    }
+  },
+  {
+    "id": "Exendin_4_Therapeutic_Peptide",
+    "sequence": "HGEGTFTSDLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS",
+    "antigenicity": {
+      "score": 0.27,
+      "is_antigen": false,
+      "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+    },
+    "allergenicity": {
+      "score": 0.53,
+      "is_allergen": true,
+      "method": "Local ACC-based Classifier (Pfeature descriptors)"
+    },
+    "toxicity": {
+      "score": 0.351,
+      "is_toxic": false,
+      "method": "ToxinPred2 (ONNX RF Model)"
+    },
+    "physicochemical": {
+      "mol_weight": 4187.56,
+      "gravy": -0.692,
+      "instability_index": 64.08,
+      "is_stable": false,
+      "isoelectric_point": 4.7,
+      "charge_at_pH7": -3.14,
+      "aromaticity": 0.077,
+      "secondary_structure": {
+        "helix": 0.333,
+        "turn": 0.41,
+        "sheet": 0.256
+      }
+    },
+    "desirability": {
+      "score": 0.0824,
+      "candidate_type": "vaccine",
+      "rank": 4
+    },
+    "epitopes": {
+      "count": 3,
+      "regions": [
+        {
+          "start": 5,
+          "end": 12,
+          "length": 8,
+          "sequence": "TFTSDLSK",
+          "mean_score": 1.009
+        },
+        {
+          "start": 15,
+          "end": 27,
+          "length": 13,
+          "sequence": "EEEAVRLFIEWLK",
+          "mean_score": 1.073
+        },
+        {
+          "start": 31,
+          "end": 39,
+          "length": 9,
+          "sequence": "PSSGAPPPS",
+          "mean_score": 1.022
+        }
+      ]
+    }
+  },
+  {
+    "id": "Ara_h_1_Peanut_Allergen",
+    "sequence": "MSASSSSARVLVPALLALLVLTAAAPASADSQFRGPRGPPTQQSQSQEPELQRQQRQ",
+    "antigenicity": {
+      "score": 0.45,
+      "is_antigen": false,
+      "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+    },
+    "allergenicity": {
+      "score": 0.72,
+      "is_allergen": true,
+      "method": "Local ACC-based Classifier (Pfeature descriptors)"
+    },
+    "toxicity": {
+      "score": 0.449,
+      "is_toxic": false,
+      "method": "ToxinPred2 (ONNX RF Model)"
+    },
+    "physicochemical": {
+      "mol_weight": 6015.69,
+      "gravy": -0.411,
+      "instability_index": 94.1,
+      "is_stable": false,
+      "isoelectric_point": 11.4,
+      "charge_at_pH7": 1.51,
+      "aromaticity": 0.018,
+      "secondary_structure": {
+        "helix": 0.333,
+        "turn": 0.316,
+        "sheet": 0.228
+      }
+    },
+    "desirability": {
+      "score": 0.0694,
+      "candidate_type": "vaccine",
+      "rank": 5
+    },
+    "epitopes": {
+      "count": 4,
+      "regions": [
+        {
+          "start": 2,
+          "end": 34,
+          "length": 33,
+          "sequence": "SASSSSARVLVPALLALLVLTAAAPASADSQFR",
+          "mean_score": 1.116
+        },
+        {
+          "start": 39,
+          "end": 46,
+          "length": 8,
+          "sequence": "PPTQQSQS",
+          "mean_score": 1.01
+        },
+        {
+          "start": 45,
+          "end": 52,
+          "length": 8,
+          "sequence": "QSQEPELQ",
+          "mean_score": 1.008
+        },
+        {
+          "start": 49,
+          "end": 57,
+          "length": 9,
+          "sequence": "PELQRQQRQ",
+          "mean_score": 1.02
+        }
+      ]
+    }
+  },
+  {
+    "id": "Bet_v_1_Birch_Allergen",
+    "sequence": "GVFNYETETTSVIPAARLFKAFILDGDNLFPKVAPQAISSVENIEGNGGPGTIKKISFPEGFPFKYVKDRVDEVDHTNFKYNYSVIEGGPIGDTLEKISNEIKIVATPDGGSILKISNKYHTKGDHEVKAEQVKASKEMGETLLRAVESYLLAHSDAYN",
+    "antigenicity": {
+      "score": 0.23,
+      "is_antigen": false,
+      "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+    },
+    "allergenicity": {
+      "score": 0.64,
+      "is_allergen": true,
+      "method": "Local ACC-based Classifier (Pfeature descriptors)"
+    },
+    "toxicity": {
+      "score": 0.263,
+      "is_toxic": false,
+      "method": "ToxinPred2 (ONNX RF Model)"
+    },
+    "physicochemical": {
+      "mol_weight": 17439.4,
+      "gravy": -0.372,
+      "instability_index": 22.59,
+      "is_stable": true,
+      "isoelectric_point": 5.39,
+      "charge_at_pH7": -4.86,
+      "aromaticity": 0.094,
+      "secondary_structure": {
+        "helix": 0.314,
+        "turn": 0.321,
+        "sheet": 0.365
+      }
+    },
+    "desirability": {
+      "score": 0.061,
+      "candidate_type": "vaccine",
+      "rank": 6
+    },
+    "epitopes": {
+      "count": 15,
+      "regions": [
+        {
+          "start": 7,
+          "end": 27,
+          "length": 21,
+          "sequence": "TETTSVIPAARLFKAFILDGD",
+          "mean_score": 1.069
+        },
+        {
+          "start": 23,
+          "end": 29,
+          "length": 7,
+          "sequence": "ILDGDNL",
+          "mean_score": 1.005
+        },
+        {
+          "start": 27,
+          "end": 45,
+          "length": 19,
+          "sequence": "DNLFPKVAPQAISSVENIE",
+          "mean_score": 1.072
+        },
+        {
+          "start": 50,
+          "end": 56,
+          "length": 7,
+          "sequence": "PGTIKKI",
+          "mean_score": 1.002
+        },
+        {
+          "start": 52,
+          "end": 60,
+          "length": 9,
+          "sequence": "TIKKISFPE",
+          "mean_score": 1.026
+        },
+        {
+          "start": 56,
+          "end": 64,
+          "length": 9,
+          "sequence": "ISFPEGFPF",
+          "mean_score": 1.015
+        },
+        {
+          "start": 61,
+          "end": 77,
+          "length": 17,
+          "sequence": "GFPFKYVKDRVDEVDHT",
+          "mean_score": 1.04
+        },
+        {
+          "start": 74,
+          "end": 80,
+          "length": 7,
+          "sequence": "VDHTNFK",
+          "mean_score": 1.009
+        },
+        {
+          "start": 79,
+          "end": 87,
+          "length": 9,
+          "sequence": "FKYNYSVIE",
+          "mean_score": 1.007
+        },
+        {
+          "start": 83,
+          "end": 91,
+          "length": 9,
+          "sequence": "YSVIEGGPI",
+          "mean_score": 1.03
+        },
+        {
+          "start": 98,
+          "end": 111,
+          "length": 14,
+          "sequence": "ISNEIKIVATPDGG",
+          "mean_score": 1.043
+        },
+        {
+          "start": 108,
+          "end": 114,
+          "length": 7,
+          "sequence": "PDGGSIL",
+          "mean_score": 1.013
+        },
+        {
+          "start": 110,
+          "end": 119,
+          "length": 10,
+          "sequence": "GGSILKISNK",
+          "mean_score": 1.04
+        },
+        {
+          "start": 124,
+          "end": 138,
+          "length": 15,
+          "sequence": "GDHEVKAEQVKASKE",
+          "mean_score": 1.036
+        },
+        {
+          "start": 140,
+          "end": 158,
+          "length": 19,
+          "sequence": "GETLLRAVESYLLAHSDAY",
+          "mean_score": 1.077
+        }
+      ]
+    }
+  },
+  {
+    "id": "Spike_RBD_Viral_Antigen",
+    "sequence": "NLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNF",
+    "antigenicity": {
+      "score": 0.41,
+      "is_antigen": false,
+      "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+    },
+    "allergenicity": {
+      "score": 0.69,
+      "is_allergen": true,
+      "method": "Local ACC-based Classifier (Pfeature descriptors)"
+    },
+    "toxicity": {
+      "score": 0.562,
+      "is_toxic": false,
+      "method": "ToxinPred2 (ONNX RF Model)"
+    },
+    "physicochemical": {
+      "mol_weight": 23359.12,
+      "gravy": -0.255,
+      "instability_index": 18.92,
+      "is_stable": true,
+      "isoelectric_point": 8.8,
+      "charge_at_pH7": 5.76,
+      "aromaticity": 0.154,
+      "secondary_structure": {
+        "helix": 0.212,
+        "turn": 0.341,
+        "sheet": 0.394
+      }
+    },
+    "desirability": {
+      "score": 0.0557,
+      "candidate_type": "vaccine",
+      "rank": 7
+    },
+    "epitopes": {
+      "count": 22,
+      "regions": [
+        {
+          "start": 1,
+          "end": 11,
+          "length": 11,
+          "sequence": "NLCPFGEVFNA",
+          "mean_score": 1.065
+        },
+        {
+          "start": 7,
+          "end": 14,
+          "length": 8,
+          "sequence": "EVFNATRF",
+          "mean_score": 1.021
+        },
+        {
+          "start": 11,
+          "end": 22,
+          "length": 12,
+          "sequence": "ATRFASVYAWNR",
+          "mean_score": 1.044
+        },
+        {
+          "start": 22,
+          "end": 41,
+          "length": 20,
+          "sequence": "RKRISNCVADYSVLYNSASF",
+          "mean_score": 1.07
+        },
+        {
+          "start": 38,
+          "end": 55,
+          "length": 18,
+          "sequence": "SASFSTFKCYGVSPTKLN",
+          "mean_score": 1.053
+        },
+        {
+          "start": 51,
+          "end": 65,
+          "length": 15,
+          "sequence": "PTKLNDLCFTNVYAD",
+          "mean_score": 1.058
+        },
+        {
+          "start": 61,
+          "end": 75,
+          "length": 15,
+          "sequence": "NVYADSFVIRGDEVR",
+          "mean_score": 1.05
+        },
+        {
+          "start": 71,
+          "end": 82,
+          "length": 12,
+          "sequence": "GDEVRQIAPGQT",
+          "mean_score": 1.038
+        },
+        {
+          "start": 93,
+          "end": 106,
+          "length": 14,
+          "sequence": "PDDFTGCVIAWNSN",
+          "mean_score": 1.072
+        },
+        {
+          "start": 107,
+          "end": 114,
+          "length": 8,
+          "sequence": "NLDSKVGG",
+          "mean_score": 1.02
+        },
+        {
+          "start": 117,
+          "end": 126,
+          "length": 10,
+          "sequence": "NYLYRLFRKS",
+          "mean_score": 1.034
+        },
+        {
+          "start": 122,
+          "end": 128,
+          "length": 7,
+          "sequence": "LFRKSNL",
+          "mean_score": 1.037
+        },
+        {
+          "start": 125,
+          "end": 131,
+          "length": 7,
+          "sequence": "KSNLKPF",
+          "mean_score": 1.008
+        },
+        {
+          "start": 128,
+          "end": 134,
+          "length": 7,
+          "sequence": "LKPFERD",
+          "mean_score": 1.001
+        },
+        {
+          "start": 135,
+          "end": 141,
+          "length": 7,
+          "sequence": "ISTEIYQ",
+          "mean_score": 1.002
+        },
+        {
+          "start": 141,
+          "end": 148,
+          "length": 8,
+          "sequence": "QAGSTPCN",
+          "mean_score": 1.033
+        },
+        {
+          "start": 144,
+          "end": 153,
+          "length": 10,
+          "sequence": "STPCNGVEGF",
+          "mean_score": 1.043
+        },
+        {
+          "start": 149,
+          "end": 165,
+          "length": 17,
+          "sequence": "GVEGFNCYFPLQSYGFQ",
+          "mean_score": 1.047
+        },
+        {
+          "start": 164,
+          "end": 170,
+          "length": 7,
+          "sequence": "FQPTNGV",
+          "mean_score": 1.016
+        },
+        {
+          "start": 169,
+          "end": 198,
+          "length": 30,
+          "sequence": "GVGYQPYRVVVLSFELLHAPATVCGPKKST",
+          "mean_score": 1.11
+        },
+        {
+          "start": 195,
+          "end": 203,
+          "length": 9,
+          "sequence": "KKSTNLVKN",
+          "mean_score": 1.02
+        },
+        {
+          "start": 199,
+          "end": 208,
+          "length": 10,
+          "sequence": "NLVKNKCVNF",
+          "mean_score": 1.086
+        }
+      ]
+    }
+  },
+  {
+    "id": "Conotoxin_Neurotoxin",
+    "sequence": "CKGKGAKCSRLMYDCCTGSCRSGKC",
+    "antigenicity": {
+      "score": 0.4,
+      "is_antigen": false,
+      "method": "VaxiJen-Alternative (ACC/PCP ML Classifier)"
+    },
+    "allergenicity": {
+      "score": 0.37,
+      "is_allergen": false,
+      "method": "Local ACC-based Classifier (Pfeature descriptors)"
+    },
+    "toxicity": {
+      "score": 0.975,
+      "is_toxic": true,
+      "method": "ToxinPred2 (ONNX RF Model)"
+    },
+    "physicochemical": {
+      "mol_weight": 2646.17,
+      "gravy": -0.464,
+      "instability_index": 59.53,
+      "is_stable": false,
+      "isoelectric_point": 9.13,
+      "charge_at_pH7": 4.7,
+      "aromaticity": 0.04,
+      "secondary_structure": {
+        "helix": 0.28,
+        "turn": 0.32,
+        "sheet": 0.12
+      }
+    },
+    "desirability": {
+      "score": 0.0063,
+      "candidate_type": "vaccine",
+      "rank": 8
+    },
+    "epitopes": {
+      "count": 1,
+      "regions": [
+        {
+          "start": 1,
+          "end": 25,
+          "length": 25,
+          "sequence": "CKGKGAKCSRLMYDCCTGSCRSGKC",
+          "mean_score": 1.053
+        }
+      ]
+    }
+  }
+]

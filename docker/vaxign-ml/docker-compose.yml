@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  vaxign-ml:
+    image: e4ong1031/vaxign-ml:v1.0
+    container_name: vaxign-ml-service
+    volumes:
+      - ./data:/data
+    entrypoint: ["/bin/bash"]
+    stdin_open: true
+    tty: true

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "OspA_Bacterial_Antigen",
+    "description": "Borrelia burgdorferi outer surface protein A (FDA-approved Lyme vaccine target)",
+    "sequence": "MKTLLILAVVAAALASGCSSVSAKDQQTLNQLISKLNKVLLDNDNDQTLKVVKNAK",
+    "true_vaccine_label": "good",
+    "true_therapeutic_label": "bad"
+  },
+  {
+    "id": "Spike_RBD_Viral_Antigen",
+    "description": "SARS-CoV-2 Receptor-Binding Domain neutralization epitope",
+    "sequence": "NLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNF",
+    "true_vaccine_label": "good",
+    "true_therapeutic_label": "bad"
+  },
+  {
+    "id": "Influenza_HA_Antigen",
+    "description": "Influenza A virus hemagglutinin protective epitope",
+    "sequence": "GLFGAIAGFIEGGWTGMIDGWYGYHHQNEQGSGYAADQKSTQNAIDGITNKVNSVIEKMNTQFEAVGKEFNNLERRIENLNKKVDDGFLDVWTYNAELLVLLENERTLDFHDSNVKNLYEKVKSQLKNNAKEIGNGCFEFYHKCDNECMESVRNGTYDYPKYSEESKLNREKVDGVKLESMGIYQ",
+    "true_vaccine_label": "good",
+    "true_therapeutic_label": "bad"
+  },
+  {
+    "id": "Exendin_4_GLP1_Agonist",
+    "description": "FDA-approved GLP-1 receptor agonist peptide drug (Exenatide)",
+    "sequence": "HGEGTFTSDLSKQMEEEAVRLFIEWLKNGGPSSGAPPPS",
+    "true_vaccine_label": "bad",
+    "true_therapeutic_label": "good"
+  },
+  {
+    "id": "Octreotide_Somatostatin",
+    "description": "FDA-approved somatostatin analog peptide drug",
+    "sequence": "CFWKTC",
+    "true_vaccine_label": "bad",
+    "true_therapeutic_label": "good"
+  },
+  {
+    "id": "Bivalirudin_Anticoagulant",
+    "description": "FDA-approved 20-aa synthetic thrombin inhibitor peptide drug",
+    "sequence": "FPRPGGGGNGDFEEIPEEYL",
+    "true_vaccine_label": "bad",
+    "true_therapeutic_label": "good"
+  },
+  {
+    "id": "Melittin_Bee_Venom_Toxin",
+    "description": "Apis mellifera pore-forming hemolytic lethal toxin",
+    "sequence": "GIGAVLKVLTTGLPALISWIKRKRQQ",
+    "true_vaccine_label": "bad",
+    "true_therapeutic_label": "bad"
+  },
+  {
+    "id": "Conotoxin_Neurotoxin",
+    "description": "Conus geographus voltage-gated calcium channel neurotoxin",
+    "sequence": "CKGKGAKCSRLMYDCCTGSCRSGKC",
+    "true_vaccine_label": "bad",
+    "true_therapeutic_label": "bad"
+  },
+  {
+    "id": "Bet_v_1_Birch_Allergen",
+    "description": "Betula verrucosa birch pollen major allergen",
+    "sequence": "GVFNYETETTSVIPAARLFKAFILDGDNLFPKVAPQAISSVENIEGNGGPGTIKKISFPEGFPFKYVKDRVDEVDHTNFKYNYSVIEGGPIGDTLEKISNEIKIVATPDGGSILKISNKYHTKGDHEVKAEQVKASKEMGETLLRAVESYLLAHSDAYN",
+    "true_vaccine_label": "bad",
+    "true_therapeutic_label": "bad"
+  },
+  {
+    "id": "Ara_h_1_Peanut_Allergen",
+    "description": "Arachis hypogaea major seed storage food allergen",
+    "sequence": "MSASSSSARVLVPALLALLVLTAAAPASADSQFRGPRGPPTQQSQSQEPELQRQQRQ",
+    "true_vaccine_label": "bad",
+    "true_therapeutic_label": "bad"
+  },
+  {
+    "id": "Ubiquitin_Human_Host",
+    "description": "Homo sapiens intracellular housekeeping protein control",
+    "sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+    "true_vaccine_label": "bad",
+    "true_therapeutic_label": "bad"
+  }
+]

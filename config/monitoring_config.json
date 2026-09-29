@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Production safety, drift monitoring, shadow mode, and retraining configuration",
+    "baseline_dataset_id": "swiss_prot_eval_v1_437_clusters",
+    "feature_extractor_version": "pfeature_pcp_aac_v1.0"
+  },
+  "model_hashes": {
+    "toxicity": "5683cd21b20c627c09dc85c2d3ad6d33533003fc01f4acae5b444368bb3e2bde",
+    "antigenicity": "c1ee5bf6aac96b3236d2e91493de12a7dfcdd834985e9ff18cdc4ff780890d60",
+    "allergenicity": "b1cbddfe919b01483cc37483c115243efc3ddefe84a6f9e565eab86f14d498fc"
+  },
+  "drift_monitoring": {
+    "alert_thresholds": {
+      "psi": {
+        "nominal": "< 0.10",
+        "investigate_yellow": 0.10,
+        "critical_red": 0.25
+      },
+      "ks_test_pvalue": {
+        "nominal": ">= 0.05",
+        "investigate_yellow": 0.05,
+        "critical_red": 0.01
+      },
+      "adversarial_validation_auroc": {
+        "nominal": "< 0.70",
+        "investigate_yellow": 0.70,
+        "critical_red": 0.80
+      },
+      "abstention_rate": {
+        "nominal": "< 0.08",
+        "investigate_yellow": 0.10,
+        "critical_red": 0.15
+      },
+      "length_bin_mix_shift_psi": {
+        "nominal": "< 0.10",
+        "investigate_yellow": 0.10,
+        "critical_red": 0.25
+      }
+    }
+  },
+  "shadow_mode": {
+    "enabled": false,
+    "canary_traffic_percentage": 0.0,
+    "max_score_divergence_tolerance": 0.20,
+    "max_disagreement_rate_tripwire": 0.10,
+    "auto_rollback_on_alarm": true,
+    "candidate_model_registry": {
+      "toxicity": null,
+      "antigenicity": null,
+      "allergenicity": null
+    }
+  },
+  "retraining_triggers": {
+    "sustained_drift_red_batches": 3,
+    "backtest_precision_at_k_drop_pct": 10.0,
+    "backtest_auroc_drop_pct": 8.0,
+    "wet_lab_feedback_min_samples": 50,
+    "evaluation_schedule": "monthly_or_post_50_assays"
+  },
+  "logging": {
+    "audit_log_path": "logs/inference_audit.jsonl",
+    "enabled": true,
+    "sanitize_log_pii": true
+  }
+}
