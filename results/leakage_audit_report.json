@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "folds_audited": 5,
+  "pairwise_cross_comparisons_performed": 209714,
+  "max_cross_partition_identity_observed": 0.4,
+  "identity_threshold_enforced": 0.4,
+  "verdict": "ZERO_LEAKAGE_VERIFIED: All outer test, inner calibration, and inner training sets are strictly disjoint."
+}

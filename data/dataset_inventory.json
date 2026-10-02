@@ -1,0 +1,346 @@
+{
+  "metadata": {
+    "governance_version": "1.1.0",
+    "governance_policy": "DATA_GOVERNANCE.md",
+    "raw_dataset_sha256": "aba7c431f0fcc74a0757c8c6d66f84d672e0d689051526475f0914e5ede48d2f",
+    "clean_dataset_sha256": "165c3f26882b8bf1fd6cce6bcb09dd401b5606ca53bd970014ccee17ffc5c8bb",
+    "near_duplicate_threshold": 0.98
+  },
+  "sources": {
+    "vaxijen_bacterial": {
+      "id": "vaxijen_bacterial",
+      "name": "VaxiJen Bacterial Immunogens (Zaharieva et al., 2019)",
+      "url": "http://ddg-pharmfac.net/vaxijen/dataset",
+      "version": "2019",
+      "license": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "label_evidence_type": "curated_experimental",
+      "status": "UNVERIFIED",
+      "target_tasks": [
+        "antigenicity_bacterial"
+      ]
+    },
+    "vaxijen_bacterial_negatives": {
+      "id": "vaxijen_bacterial_negatives",
+      "name": "VaxiJen v3.0 Bacterial Non-Immunogens (Dimitrov et al., 2020)",
+      "url": "http://ddg-pharmfac.net/vaxijen/dataset",
+      "version": "2020",
+      "license": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "label_evidence_type": "curated_non_immunogen",
+      "status": "UNVERIFIED",
+      "target_tasks": [
+        "antigenicity_bacterial"
+      ]
+    },
+    "vaxigen_tumor": {
+      "id": "vaxigen_tumor",
+      "name": "VaxiGen Tumor Database (Doneva et al., 2021)",
+      "url": "http://ddg-pharmfac.net/vaxijen3/tumordb",
+      "version": "2021",
+      "license": "CC BY 4.0",
+      "redistribution_allowed": true,
+      "label_evidence_type": "curated_experimental",
+      "status": "VERIFIED",
+      "target_tasks": [
+        "antigenicity_tumor"
+      ]
+    },
+    "vaxijen_viral": {
+      "id": "vaxijen_viral",
+      "name": "VaxiJen Viral Data (Doneva & Dimitrov, 2024)",
+      "url": "http://ddg-pharmfac.net/vaxijen3/",
+      "version": "2024",
+      "license": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "label_evidence_type": "curated_viral",
+      "status": "UNVERIFIED",
+      "target_tasks": [
+        "antigenicity_viral"
+      ]
+    },
+    "iedb": {
+      "id": "iedb",
+      "name": "Immune Epitope Database (IEDB)",
+      "url": "https://www.iedb.org/",
+      "version": "continuous",
+      "license": "Research Only (Commercial Restricted)",
+      "redistribution_allowed": false,
+      "label_evidence_type": "experimental_assay",
+      "status": "VERIFIED_RESEARCH_ONLY",
+      "target_tasks": [
+        "antigenicity_validation"
+      ]
+    },
+    "protegen": {
+      "id": "protegen",
+      "name": "Protegen Protective Antigens (VIOLIN)",
+      "url": "https://violinet.org/protegen/",
+      "version": "continuous",
+      "license": "Research Only (Commercial Restricted)",
+      "redistribution_allowed": false,
+      "label_evidence_type": "experimental_challenge_protection",
+      "status": "VERIFIED_RESEARCH_ONLY",
+      "target_tasks": [
+        "antigenicity_protective"
+      ]
+    },
+    "uniprot_swissprot": {
+      "id": "uniprot_swissprot",
+      "name": "UniProtKB / Swiss-Prot Reviewed Records",
+      "url": "https://rest.uniprot.org/uniprotkb/search",
+      "version": "2026_current",
+      "license": "CC BY 4.0",
+      "redistribution_allowed": true,
+      "label_evidence_type": "curated_literature",
+      "status": "VERIFIED",
+      "target_tasks": [
+        "toxicity",
+        "antigenicity",
+        "allergenicity",
+        "length_matched_negatives"
+      ]
+    },
+    "toxinpred_datasets": {
+      "id": "toxinpred_datasets",
+      "name": "ToxinPred2 Benchmark Datasets (Sharma et al., 2022)",
+      "url": "https://webs.iiitd.edu.in/raghava/toxinpred2/",
+      "version": "2022",
+      "license": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "label_evidence_type": "curated_swissprot",
+      "status": "UNVERIFIED",
+      "target_tasks": [
+        "toxicity"
+      ]
+    },
+    "allergenonline": {
+      "id": "allergenonline",
+      "name": "AllergenOnline Database (FARRP)",
+      "url": "http://www.allergenonline.org/",
+      "version": "v21",
+      "license": "UNVERIFIED",
+      "redistribution_allowed": false,
+      "label_evidence_type": "peer_reviewed_clinical_ige",
+      "status": "UNVERIFIED",
+      "target_tasks": [
+        "allergenicity"
+      ]
+    },
+    "compare_database": {
+      "id": "compare_database",
+      "name": "COMPARE Allergen Database (HESI)",
+      "url": "https://comparedatabase.org/",
+      "version": "annual_peer_reviewed",
+      "license": "Public Resource / CC BY publications",
+      "redistribution_allowed": true,
+      "label_evidence_type": "peer_reviewed_clinical_ige",
+      "status": "VERIFIED",
+      "target_tasks": [
+        "allergenicity"
+      ]
+    }
+  },
+  "sizes": {
+    "raw_sequences_count": 525,
+    "clean_sequences_count": 512,
+    "removed_duplicates_count": 13
+  },
+  "class_balance": {
+    "antigenicity": {
+      "raw": {
+        "positive_count": 100,
+        "negative_count": 425,
+        "positive_prevalence": 0.1905
+      },
+      "clean": {
+        "positive_count": 93,
+        "negative_count": 419,
+        "positive_prevalence": 0.1816
+      }
+    },
+    "toxicity": {
+      "raw": {
+        "positive_count": 146,
+        "negative_count": 379,
+        "positive_prevalence": 0.2781
+      },
+      "clean": {
+        "positive_count": 142,
+        "negative_count": 370,
+        "positive_prevalence": 0.2773
+      }
+    },
+    "allergenicity": {
+      "raw": {
+        "positive_count": 100,
+        "negative_count": 425,
+        "positive_prevalence": 0.1905
+      },
+      "clean": {
+        "positive_count": 100,
+        "negative_count": 412,
+        "positive_prevalence": 0.1953
+      }
+    }
+  },
+  "length_distributions": {
+    "raw": {
+      "count": 525,
+      "min": 7,
+      "max": 3321,
+      "mean": 209.54,
+      "std": 280.32,
+      "median": 137.0,
+      "p25": 61.0,
+      "p75": 261.0,
+      "bins": {
+        "5-9": {
+          "count": 10,
+          "fraction": 0.019
+        },
+        "10-14": {
+          "count": 40,
+          "fraction": 0.0762
+        },
+        "15-24": {
+          "count": 17,
+          "fraction": 0.0324
+        },
+        "25-49": {
+          "count": 50,
+          "fraction": 0.0952
+        },
+        "50+": {
+          "count": 408,
+          "fraction": 0.7771
+        }
+      }
+    },
+    "clean": {
+      "count": 512,
+      "min": 7,
+      "max": 3321,
+      "mean": 212.26,
+      "std": 283.08,
+      "median": 138.0,
+      "p25": 62.5,
+      "p75": 263.0,
+      "bins": {
+        "5-9": {
+          "count": 10,
+          "fraction": 0.0195
+        },
+        "10-14": {
+          "count": 38,
+          "fraction": 0.0742
+        },
+        "15-24": {
+          "count": 16,
+          "fraction": 0.0312
+        },
+        "25-49": {
+          "count": 50,
+          "fraction": 0.0977
+        },
+        "50+": {
+          "count": 398,
+          "fraction": 0.7773
+        }
+      }
+    }
+  },
+  "removals_log": [
+    {
+      "removed_id": "C0HJX5",
+      "retained_duplicate_id": "C0HJX4",
+      "reason": "EXACT_DUPLICATE_RETAINED_PRIMARY",
+      "sequence_length": 11,
+      "similarity": 1.0
+    },
+    {
+      "removed_id": "C0HKG9",
+      "retained_duplicate_id": "C0HKG7",
+      "reason": "NEAR_DUPLICATE (identity 99.5% >= 98.0%)",
+      "sequence_length": 183,
+      "similarity": 0.9945
+    },
+    {
+      "removed_id": "C0HKQ8",
+      "retained_duplicate_id": "C0HKQ7",
+      "reason": "EXACT_DUPLICATE_RETAINED_PRIMARY",
+      "sequence_length": 63,
+      "similarity": 1.0
+    },
+    {
+      "removed_id": "P01446",
+      "retained_duplicate_id": "P01445",
+      "reason": "NEAR_DUPLICATE (identity 98.3% >= 98.0%)",
+      "sequence_length": 60,
+      "similarity": 0.9833
+    },
+    {
+      "removed_id": "P06899",
+      "retained_duplicate_id": "O60814",
+      "reason": "NEAR_DUPLICATE (identity 99.2% >= 98.0%)",
+      "sequence_length": 126,
+      "similarity": 0.9921
+    },
+    {
+      "removed_id": "P08865",
+      "retained_duplicate_id": "A0A8I5KQE6",
+      "reason": "NEAR_DUPLICATE (identity 99.0% >= 98.0%)",
+      "sequence_length": 295,
+      "similarity": 0.9898
+    },
+    {
+      "removed_id": "P0C350",
+      "retained_duplicate_id": "P0C349",
+      "reason": "EXACT_DUPLICATE_RETAINED_PRIMARY",
+      "sequence_length": 22,
+      "similarity": 1.0
+    },
+    {
+      "removed_id": "P0DUV2",
+      "retained_duplicate_id": "P0DUV1",
+      "reason": "EXACT_DUPLICATE_RETAINED_PRIMARY",
+      "sequence_length": 10,
+      "similarity": 1.0
+    },
+    {
+      "removed_id": "P57053",
+      "retained_duplicate_id": "O60814",
+      "reason": "NEAR_DUPLICATE (identity 98.4% >= 98.0%)",
+      "sequence_length": 126,
+      "similarity": 0.9841
+    },
+    {
+      "removed_id": "P59666",
+      "retained_duplicate_id": "P59665",
+      "reason": "NEAR_DUPLICATE (identity 98.9% >= 98.0%)",
+      "sequence_length": 94,
+      "similarity": 0.9894
+    },
+    {
+      "removed_id": "P62807",
+      "retained_duplicate_id": "O60814",
+      "reason": "NEAR_DUPLICATE (identity 99.2% >= 98.0%)",
+      "sequence_length": 126,
+      "similarity": 0.9921
+    },
+    {
+      "removed_id": "Q16778",
+      "retained_duplicate_id": "O60814",
+      "reason": "NEAR_DUPLICATE (identity 98.4% >= 98.0%)",
+      "sequence_length": 126,
+      "similarity": 0.9841
+    },
+    {
+      "removed_id": "Q7T273",
+      "retained_duplicate_id": "P61516",
+      "reason": "NEAR_DUPLICATE (identity 98.9% >= 98.0%)",
+      "sequence_length": 91,
+      "similarity": 0.989
+    }
+  ]
+}
