@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-10-02 18:40:31",
+  "test_partition": "Outer Fold 0 Held-Out Homology Clusters",
+  "sample_size": 103,
+  "gating_summary": {
+    "ranked_survivors": 47,
+    "excluded_by_toxicity_cap": 56,
+    "abstained_ood": 0,
+    "unstable_count": 23,
+    "aggregation_prone_count": 10,
+    "advisory_short_peptide_count": 0
+  },
+  "pareto_front_distribution": {
+    "0": 20,
+    "1": 13,
+    "2": 5,
+    "3": 6,
+    "4": 3
+  },
+  "cross_axis_correlations": {
+    "antigenicity_vs_toxicity": {
+      "pearson_r": 0.2273,
+      "pearson_p_value": 0.020968,
+      "spearman_rho": 0.3213,
+      "spearman_p_value": 0.000937
+    },
+    "antigenicity_vs_allergenicity": {
+      "pearson_r": 0.767,
+      "pearson_p_value": 0.0,
+      "spearman_rho": 0.7751,
+      "spearman_p_value": 0.0
+    },
+    "toxicity_vs_allergenicity": {
+      "pearson_r": 0.2796,
+      "pearson_p_value": 0.004231,
+      "spearman_rho": 0.3382,
+      "spearman_p_value": 0.000475
+    }
+  },
+  "tradeoff_analysis": {
+    "total_test_candidates": 103,
+    "high_antigen_count": 0,
+    "high_toxic_count": 37,
+    "high_allergen_count": 0,
+    "antigen_and_toxic_count": 0,
+    "antigen_and_toxic_percentage": 0.0,
+    "antigen_and_allergen_count": 0,
+    "antigen_and_allergen_percentage": 0.0,
+    "toxic_and_allergen_count": 0,
+    "ideal_compromise_count": 0,
+    "ideal_compromise_percentage": 0.0
+  }
+}

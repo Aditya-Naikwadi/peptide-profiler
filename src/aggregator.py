@@ -14,6 +14,7 @@ import pandas as pd
 
 from src.allergenicity import run_allergenicity
 from src.antigenicity import run_antigenicity
+from src.models.pareto import JointCandidateRanker, evaluate_stability_gate
 from src.physicochem import run_physicochemical
 from src.toxicity import run_toxicity
 
@@ -341,10 +342,26 @@ def profile_sequence(
             "gravy": physico["gravy"],
             "instability_index": physico["instability_index"],
             "is_stable": physico["is_stable"],
+            "is_advisory_short_peptide": physico.get("is_advisory_short_peptide", seq_len < 20),
             "isoelectric_point": physico["isoelectric_point"],
             "charge_at_pH7": physico["charge_at_pH7"],
+            "charge_at_pH7_4": physico.get("charge_at_pH7_4", physico["charge_at_pH7"]),
+            "aggregation_score": physico.get("aggregation_score", 0.0),
             "aromaticity": physico["aromaticity"],
             "secondary_structure": physico["secondary_structure"],
+        },
+        "stability": {
+            "instability_index": physico["instability_index"],
+            "is_stable": physico["is_stable"],
+            "is_advisory_short_peptide": physico.get("is_advisory_short_peptide", seq_len < 20),
+            "gravy": physico["gravy"],
+            "charge_at_pH7_4": physico.get("charge_at_pH7_4", physico["charge_at_pH7"]),
+            "aggregation_score": physico.get("aggregation_score", 0.0),
+            "secondary_structure": physico["secondary_structure"],
+            "advisory_notes": (
+                [f"Peptide length ({seq_len} aa) < 20 aa: Instability index ({physico['instability_index']}) is parameterized on globular proteins and is advisory only."]
+                if seq_len < 20 else []
+            ),
         },
         "desirability": {
             "score": desirability_score,
@@ -372,8 +389,9 @@ def profile_multiple_sequences(
     use_docker: bool = False,
     use_api: bool = False,
     enforce_safety_gates: bool = True,
+    uncertainty_margin: float = 0.02,
 ) -> List[Dict[str, Any]]:
-    """Profile a batch of peptide sequences with hard safety gating and conservative ranking."""
+    """Profile a batch of peptide sequences with hard safety gating and Pareto multi-objective ranking."""
     profiles: List[Dict[str, Any]] = []
 
     for rec in records:
@@ -391,17 +409,21 @@ def profile_multiple_sequences(
         profiles.append(prof)
 
     if rank_candidates:
-        # Separate candidate survivors (APPROVED and FLAGGED) from EXCLUDED safety violations
-        survivors = [p for p in profiles if p["candidate_status"] != "EXCLUDED"]
-        excluded = [p for p in profiles if p["candidate_status"] == "EXCLUDED"]
+        ranker = JointCandidateRanker(
+            candidate_type=candidate_type,
+            active_toxicity_cap=tox_threshold if tox_threshold is not None else 0.50,
+            uncertainty_margin=uncertainty_margin,
+            enforce_hard_toxicity_cap=enforce_safety_gates,
+        )
+        ranked_bundle = ranker.rank_candidates(profiles)
 
-        # Sort survivors by conservative rank score descending
-        survivors.sort(key=lambda x: x["desirability"]["conservative_rank_score"], reverse=True)
+        # Merge ranked survivors, excluded violations, and abstained OOD
+        ordered_profiles = (
+            ranked_bundle["ranked_candidates"]
+            + ranked_bundle["excluded_candidates"]
+            + ranked_bundle["abstained_ood"]
+        )
 
-        # Sort excluded candidates by toxicity risk ascending
-        excluded.sort(key=lambda x: x["toxicity"]["score"])
-
-        ordered_profiles = survivors + excluded
         for rank, p in enumerate(ordered_profiles, start=1):
             p["desirability"]["rank"] = rank
 
@@ -433,13 +455,19 @@ def to_dataframe(profiles: List[Dict[str, Any]]) -> pd.DataFrame:
             "Desirability_Score": p["desirability"]["score"],
             "Conservative_Rank_Score": p["desirability"].get("conservative_rank_score", p["desirability"]["score"]),
             "Desirability_Rank": p["desirability"].get("rank", "-"),
+            "Pareto_Front": p.get("pareto_ranking", {}).get("front_index", "-"),
+            "Crowding_Distance": p.get("pareto_ranking", {}).get("crowding_distance", "-"),
+            "Derringer_Suich_Score": p.get("derringer_suich_scalarization", {}).get("derringer_suich_score", "-"),
             "Expected_Cost_USD": p["desirability"].get("expected_cost_usd", 0.0),
             "Mol_Weight_Da": p["physicochemical"]["mol_weight"],
             "GRAVY": p["physicochemical"]["gravy"],
             "Instability_Index": p["physicochemical"]["instability_index"],
             "Is_Stable": p["physicochemical"]["is_stable"],
+            "Advisory_Short_Peptide": p["physicochemical"].get("is_advisory_short_peptide", False),
             "Isoelectric_Point": p["physicochemical"]["isoelectric_point"],
             "Net_Charge_pH7": p["physicochemical"]["charge_at_pH7"],
+            "Net_Charge_pH7_4": p["physicochemical"].get("charge_at_pH7_4", p["physicochemical"]["charge_at_pH7"]),
+            "Aggregation_Score": p["physicochemical"].get("aggregation_score", 0.0),
             "Aromaticity": p["physicochemical"]["aromaticity"],
             "Helix_Fraction": p["physicochemical"]["secondary_structure"]["helix"],
             "Sheet_Fraction": p["physicochemical"]["secondary_structure"]["sheet"],

@@ -216,6 +216,17 @@ def run_physicochemical(sequence: str) -> Dict[str, Any]:
         "sheet": round(sec_struct[2], 3),
     }
 
+    # Charge at physiological extracellular pH 7.4
+    charge_7_4 = round(analyser.charge_at_pH(7.4), 2)
+
+    # Aggregation propensity
+    agg_weights = {
+        "F": 1.5, "I": 1.3, "W": 1.2, "L": 1.1, "V": 1.0, "Y": 0.9, "M": 0.8, "C": 0.5,
+        "A": 0.1, "T": 0.0, "S": -0.2, "G": -0.3, "Q": -0.3, "N": -0.4, "H": -0.5,
+        "K": -1.0, "R": -1.0, "D": -1.2, "E": -1.2, "P": -1.5,
+    }
+    agg_score = round(sum(agg_weights.get(aa, 0.0) for aa in cleaned) / max(1, len(cleaned)), 3)
+
     # Pfeature composition & descriptors
     aac = calculate_aac(cleaned)
     pcp = calculate_pcp_descriptors(cleaned)
@@ -227,8 +238,11 @@ def run_physicochemical(sequence: str) -> Dict[str, Any]:
         "gravy": gravy,
         "instability_index": instability,
         "is_stable": bool(instability < 40.0),
+        "is_advisory_short_peptide": bool(len(cleaned) < 20),
         "isoelectric_point": pI,
         "charge_at_pH7": charge_7,
+        "charge_at_pH7_4": charge_7_4,
+        "aggregation_score": agg_score,
         "aromaticity": aromaticity,
         "secondary_structure": sec_struct_dict,
         "aac": aac,
