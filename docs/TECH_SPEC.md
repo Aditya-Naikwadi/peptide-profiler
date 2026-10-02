@@ -7,13 +7,16 @@ The "Current" section reflects the owner's description. The agent must verify it
 FASTA -> Sequence Sanitizer/Parser (20 standard AA; cleans X/B/Z)
    -> Physicochemical (Biopython ProtParam + Pfeature 30-D PCP)
    -> Toxicity     : ToxinPred2 RF (ONNX, ~119.5 MB, 20-D AAC), optional NCBI BLASTp hybrid, threshold 0.60
-   -> Antigenicity : calibrated 100-tree RF (antigen_rf.joblib), 50-D AAC+PCP, threshold 0.50 (optional Vaxign-ML Docker)
-   -> Allergenicity: calibrated 100-tree RF (allergen_rf.joblib), ACC+PCP, threshold 0.50 (web API / motif fallbacks)
+   -> Antigenicity : shallow 100-tree RF (antigen_rf.joblib, depths 2-5, median 3.0, nodes 5-15, median 9.0), 50-D AAC+PCP, threshold 0.50 (optional Vaxign-ML Docker)
+   -> Allergenicity: shallow 100-tree RF (allergen_rf.joblib, depths 2-5, median 3.0, nodes 5-17, median 9.0), 50-D AAC+PCP, threshold 0.50 (web API / motif fallbacks)
    -> Aggregator: Kolaskar-Tongaonkar linear B-cell epitopes (window 7, threshold 1.0)
-                  + desirability D = (d_ant * d_tox * d_alg)^(1/3)
+                  + legacy desirability product:
+                    Vaccine: D = d_ant * (1 - d_tox) * (1 - d_alg)
+                    Therapeutic: D = (1 - d_ant) * (1 - d_tox) * (1 - d_alg)
+                    (Vulnerable to compensatory ranking: toxic candidates rank well if antigenic)
    -> Reports (CSV/JSON/HTML)
 ```
-Runtime: Python 3.10/3.11; Docker (python:3.11-slim, ncbi-blast+); docker-compose with `peptide-profiler` (Streamlit :8501) and `vaxign-ml`. Interfaces: CLI and Streamlit.
+Runtime: Python 3.10-3.13 (active .venv: Python 3.13.5, scikit-learn 1.6.1, onnxruntime 1.20.1, biopython 1.85); Docker (python:3.11-slim, ncbi-blast+); docker-compose with `peptide-profiler` (Streamlit :8501) and `vaxign-ml`. Interfaces: CLI and Streamlit. CI: None initially configured.
 
 ## 2. Target architecture (changes)
 | Area | Change |
