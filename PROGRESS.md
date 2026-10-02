@@ -73,7 +73,7 @@ Maintained continuously per operating rule 3. Status: `todo` / `in-progress` / `
 ## WP6: Allergenicity and Toxicity
 | ID | Task | Acceptance Criteria | Status | Commit | Evidence |
 |---|---|---|:---:|---|---|
-| **6.1** | Retrain allergenicity; add FAO/WHO homology rule | Grouped-CV results; rule tests | todo | | |
+| **6.1** | Retrain allergenicity; add FAO/WHO homology rule | Grouped-CV results; rule tests | done | `76e1e95` | [`src/models/fao_who_engine.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/models/fao_who_engine.py), [`docs/REGULATORY_ALLERGENICITY_REPORT.md`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/docs/REGULATORY_ALLERGENICITY_REPORT.md), [`tests/test_fao_who_engine.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_fao_who_engine.py) (6/6 tests green, $\Delta = +0.1000$ recall gain at 95% spec) |
 | **6.2** | Toxicity: upstream ONNX baseline vs in-house model | Evaluated on independent set | todo | | |
 | **6.3** | Error-correlation analysis across predictors | Report diversity | todo | | |
 
