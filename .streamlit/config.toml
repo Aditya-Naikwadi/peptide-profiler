@@ -1,0 +1,10 @@
+[server]
+port = 8501
+address = "localhost"
+enableCORS = false
+enableXsrfProtection = false
+headless = true
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"

@@ -1,0 +1,287 @@
+{
+  "dataset_size": 525,
+  "antigens": 100,
+  "non_antigens": 425,
+  "clusters_count": 437,
+  "baselines_50d": {
+    "LogisticRegression": {
+      "auroc": 0.6905,
+      "auprc": 0.2938,
+      "balanced_accuracy": 0.5391,
+      "sensitivity": 0.17,
+      "specificity": 0.9082,
+      "mcc": 0.0995,
+      "precision": 0.3036,
+      "brier_score": 0.1643,
+      "auroc_ci": "0.6938 [0.6088 - 0.7669]",
+      "auroc_ci_low": 0.6088,
+      "auroc_ci_high": 0.7669,
+      "auprc_ci": "0.3044 [0.2182 - 0.4013]",
+      "auprc_ci_low": 0.2182,
+      "auprc_ci_high": 0.4013
+    },
+    "RandomForest": {
+      "auroc": 0.7792,
+      "auprc": 0.6039,
+      "balanced_accuracy": 0.5915,
+      "sensitivity": 0.19,
+      "specificity": 0.9929,
+      "mcc": 0.3585,
+      "precision": 0.8636,
+      "brier_score": 0.12,
+      "auroc_ci": "0.7849 [0.6796 - 0.8735]",
+      "auroc_ci_low": 0.6796,
+      "auroc_ci_high": 0.8735,
+      "auprc_ci": "0.6106 [0.4980 - 0.7131]",
+      "auprc_ci_low": 0.498,
+      "auprc_ci_high": 0.7131
+    },
+    "XGBoost": {
+      "auroc": 0.756,
+      "auprc": 0.5946,
+      "balanced_accuracy": 0.6859,
+      "sensitivity": 0.4,
+      "specificity": 0.9718,
+      "mcc": 0.4887,
+      "precision": 0.7692,
+      "brier_score": 0.1141,
+      "auroc_ci": "0.7602 [0.6628 - 0.8489]",
+      "auroc_ci_low": 0.6628,
+      "auroc_ci_high": 0.8489,
+      "auprc_ci": "0.6001 [0.4822 - 0.7085]",
+      "auprc_ci_low": 0.4822,
+      "auprc_ci_high": 0.7085
+    },
+    "kNN": {
+      "auroc": 0.7583,
+      "auprc": 0.4295,
+      "balanced_accuracy": 0.6594,
+      "sensitivity": 0.38,
+      "specificity": 0.9388,
+      "mcc": 0.3827,
+      "precision": 0.5938,
+      "brier_score": 0.1325,
+      "auroc_ci": "0.7624 [0.6791 - 0.8330]",
+      "auroc_ci_low": 0.6791,
+      "auroc_ci_high": 0.833,
+      "auprc_ci": "0.4393 [0.3394 - 0.5375]",
+      "auprc_ci_low": 0.3394,
+      "auprc_ci_high": 0.5375
+    }
+  },
+  "baselines_acc": {
+    "LogisticRegression": {
+      "auroc": 0.7579,
+      "auprc": 0.3595,
+      "balanced_accuracy": 0.6541,
+      "sensitivity": 0.44,
+      "specificity": 0.8682,
+      "mcc": 0.3082,
+      "precision": 0.44,
+      "brier_score": 0.1727,
+      "auroc_ci": "0.7581 [0.6963 - 0.8160]",
+      "auroc_ci_low": 0.6963,
+      "auroc_ci_high": 0.816,
+      "auprc_ci": "0.3688 [0.2789 - 0.4741]",
+      "auprc_ci_low": 0.2789,
+      "auprc_ci_high": 0.4741
+    },
+    "RandomForest": {
+      "auroc": 0.7772,
+      "auprc": 0.462,
+      "balanced_accuracy": 0.52,
+      "sensitivity": 0.04,
+      "specificity": 1.0,
+      "mcc": 0.1806,
+      "precision": 1.0,
+      "brier_score": 0.1339,
+      "auroc_ci": "0.7785 [0.7223 - 0.8300]",
+      "auroc_ci_low": 0.7223,
+      "auroc_ci_high": 0.83,
+      "auprc_ci": "0.4687 [0.3453 - 0.5947]",
+      "auprc_ci_low": 0.3453,
+      "auprc_ci_high": 0.5947
+    },
+    "XGBoost": {
+      "auroc": 0.8224,
+      "auprc": 0.6023,
+      "balanced_accuracy": 0.6103,
+      "sensitivity": 0.23,
+      "specificity": 0.9906,
+      "mcc": 0.3922,
+      "precision": 0.8519,
+      "brier_score": 0.1166,
+      "auroc_ci": "0.8221 [0.7681 - 0.8721]",
+      "auroc_ci_low": 0.7681,
+      "auroc_ci_high": 0.8721,
+      "auprc_ci": "0.6051 [0.4920 - 0.7063]",
+      "auprc_ci_low": 0.492,
+      "auprc_ci_high": 0.7063
+    },
+    "kNN": {
+      "auroc": 0.7664,
+      "auprc": 0.4773,
+      "balanced_accuracy": 0.6285,
+      "sensitivity": 0.29,
+      "specificity": 0.9671,
+      "mcc": 0.3681,
+      "precision": 0.6744,
+      "brier_score": 0.1248,
+      "auroc_ci": "0.7682 [0.7093 - 0.8250]",
+      "auroc_ci_low": 0.7093,
+      "auroc_ci_high": 0.825,
+      "auprc_ci": "0.4802 [0.3710 - 0.5906]",
+      "auprc_ci_low": 0.371,
+      "auprc_ci_high": 0.5906
+    }
+  },
+  "vaxijen_replication": {
+    "auroc": 0.8568,
+    "auprc": 0.6499,
+    "balanced_accuracy": 0.5776,
+    "sensitivity": 0.16,
+    "specificity": 0.9953,
+    "mcc": 0.3351,
+    "precision": 0.8889,
+    "brier_score": 0.1126,
+    "auroc_ci": "0.8586 [0.8042 - 0.9033]",
+    "auroc_ci_low": 0.8042,
+    "auroc_ci_high": 0.9033,
+    "auprc_ci": "0.6552 [0.5346 - 0.7622]",
+    "auprc_ci_low": 0.5346,
+    "auprc_ci_high": 0.7622
+  },
+  "feature_pruning": {
+    "original_features": 125,
+    "pruned_features": 50,
+    "top_feature_indices": [
+      3,
+      2,
+      1,
+      85,
+      39,
+      108,
+      45,
+      71,
+      64,
+      37,
+      105,
+      25,
+      91,
+      14,
+      23
+    ],
+    "top_feature_importances": [
+      0.04019999876618385,
+      0.026669999584555626,
+      0.020589999854564667,
+      0.010160000063478947,
+      0.0076500000432133675,
+      0.007410000078380108,
+      0.006200000178068876,
+      0.006120000034570694,
+      0.006000000052154064,
+      0.005100000184029341,
+      0.005100000184029341,
+      0.004749999847263098,
+      0.0045900000259280205,
+      0.004550000187009573,
+      0.004389999900013208
+    ],
+    "pruned_model_performance": {
+      "auroc": 0.8768,
+      "auprc": 0.6793,
+      "balanced_accuracy": 0.5926,
+      "sensitivity": 0.19,
+      "specificity": 0.9953,
+      "mcc": 0.3713,
+      "precision": 0.9048,
+      "brier_score": 0.1079,
+      "auroc_ci": "0.8775 [0.8243 - 0.9201]",
+      "auroc_ci_low": 0.8243,
+      "auroc_ci_high": 0.9201,
+      "auprc_ci": "0.6823 [0.5688 - 0.7746]",
+      "auprc_ci_low": 0.5688,
+      "auprc_ci_high": 0.7746
+    }
+  },
+  "organism_evaluation": {
+    "supported_organisms": [
+      "bacteria",
+      "virus",
+      "tumor"
+    ],
+    "sample_bacterial_prediction": {
+      "antigenicity_score": 0.7454,
+      "is_antigen": true,
+      "status": "success",
+      "reason": null,
+      "organism_type": "bacteria",
+      "threshold": 0.5
+    },
+    "sample_viral_prediction": {
+      "antigenicity_score": 0.7454,
+      "is_antigen": true,
+      "status": "success",
+      "reason": null,
+      "organism_type": "virus",
+      "threshold": 0.4
+    },
+    "sample_tumor_prediction": {
+      "antigenicity_score": 0.2541,
+      "is_antigen": false,
+      "status": "success",
+      "reason": null,
+      "organism_type": "tumor",
+      "threshold": 0.5
+    },
+    "sample_unsupported_abstention": {
+      "antigenicity_score": null,
+      "is_antigen": null,
+      "status": "abstain",
+      "reason": "unsupported_organism",
+      "message": "Unsupported organism 'fungal'. Supported classes: 'bacteria', 'virus', 'tumor'.",
+      "organism_type": "fungal"
+    }
+  },
+  "length_bin_breakdown": {
+    "<15 aa": {
+      "count": 50,
+      "positives": 0,
+      "auroc": null,
+      "accuracy": 1.0
+    },
+    "15-50 aa": {
+      "count": 72,
+      "positives": 1,
+      "auroc": 0.1127,
+      "balanced_accuracy": 0.493,
+      "sensitivity": 0.0,
+      "specificity": 0.9859
+    },
+    "50-200 aa": {
+      "count": 233,
+      "positives": 75,
+      "auroc": 0.8642,
+      "balanced_accuracy": 0.5702,
+      "sensitivity": 0.1467,
+      "specificity": 0.9937
+    },
+    "200-500 aa": {
+      "count": 125,
+      "positives": 20,
+      "auroc": 0.8676,
+      "balanced_accuracy": 0.575,
+      "sensitivity": 0.15,
+      "specificity": 1.0
+    },
+    ">500 aa": {
+      "count": 45,
+      "positives": 4,
+      "auroc": 0.9878,
+      "balanced_accuracy": 0.75,
+      "sensitivity": 0.5,
+      "specificity": 1.0
+    }
+  }
+}
