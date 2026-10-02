@@ -82,10 +82,10 @@ Maintained continuously per operating rule 3. Status: `todo` / `in-progress` / `
 ## WP7: Calibration and Thresholds
 | ID | Task | Acceptance Criteria | Status | Commit | Evidence |
 |---|---|---|:---:|---|---|
-| **7.1** | Calibrate on group-held-out data | Brier, ECE, reliability curves | todo | | |
-| **7.2** | Prior-shift correction | Tested | todo | | |
-| **7.3** | Cost-based thresholds per organism/profile | Frozen versioned config | todo | | |
-| **7.4** | Full metric table incl. PPV at 1/2/3% by length bin | Non-ML-readable table | todo | | |
+| **7.1** | Calibrate on group-held-out data | Brier, ECE, reliability curves | done | `pending` | [`src/models/calibrator.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/models/calibrator.py), [`docs/CALIBRATION_AND_THRESHOLDS_REPORT.md`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/docs/CALIBRATION_AND_THRESHOLDS_REPORT.md) (ECE: 0.1033 -> 0.0699, Brier: 0.1357 -> 0.1349) |
+| **7.2** | Prior-shift correction | Tested | done | `pending` | [`src/models/calibrator.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/models/calibrator.py), [`tests/test_calibration_and_thresholds.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_calibration_and_thresholds.py) (Saerens formula verified) |
+| **7.3** | Cost-based thresholds per organism/profile | Frozen versioned config | done | `pending` | [`config/cost_profiles.yaml`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/config/cost_profiles.yaml), [`src/models/thresholds.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/models/thresholds.py) |
+| **7.4** | Full metric table incl. PPV at 1/2/3% by length bin | Non-ML-readable table | done | `pending` | [`docs/CALIBRATION_AND_THRESHOLDS_REPORT.md`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/docs/CALIBRATION_AND_THRESHOLDS_REPORT.md) (§4.1 Table, 1/2/3% PPV & screened/hit) |
 
 ---
 

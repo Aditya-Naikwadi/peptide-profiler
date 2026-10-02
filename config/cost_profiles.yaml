@@ -1,0 +1,38 @@
+# config/cost_profiles.yaml
+# Cost matrices and deployment-specific operational constraints for peptide screening profiles
+# Directly enforces the Bayes-optimal rule: flag positive when p' > C_FP / (C_FP + C_FN)
+
+version: "1.0.0"
+date: "2026-10-02"
+
+profiles:
+  vaccine:
+    antigenicity:
+      target_recall: 0.90
+      cost_fn: 10.0
+      cost_fp: 1.0
+    toxicity:
+      max_fpr: 0.02     # Cap over-rejection of good candidates (conservative hazard threshold)
+  therapeutic:
+    toxicity:
+      min_sensitivity_on_hazard: 0.98
+      max_fpr: 0.20
+    immunogenicity:
+      min_sensitivity_on_hazard: 0.98
+      max_fpr: 0.20
+
+prevalence_target:
+  antigen: 0.02   # 2% target deployment prevalence
+  toxic: 0.01     # 1% target deployment prevalence
+  allergen: 0.01  # 1% target deployment prevalence
+
+# Evaluation grid for prevalence sensitivity table (collapsing PPV demonstration)
+prevalence_sensitivity_grid:
+  - 0.005 # 0.5% (Very rare hazard)
+  - 0.01  # 1.0% (Codex / clinical trial standard)
+  - 0.02  # 2.0%
+  - 0.03  # 3.0%
+  - 0.05  # 5.0%
+  - 0.10  # 10.0%
+  - 0.20  # 20.0%
+  - 0.50  # 50.0% (Unadjusted lab benchmark prevalence)
