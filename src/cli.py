@@ -75,6 +75,24 @@ def build_parser() -> argparse.ArgumentParser:
         help="Candidate design goal: 'vaccine' (maximize antigenicity) or 'therapeutic' (minimize antigenicity).",
     )
     parser.add_argument(
+        "--profile",
+        choices=["vaccine", "therapeutic"],
+        default=None,
+        help="Screening profile: 'vaccine' or 'therapeutic' (alias/override for --candidate-type).",
+    )
+    parser.add_argument(
+        "--target-prevalence",
+        type=float,
+        default=0.02,
+        help="Target screening prevalence (pi_t) for Bayes prior adjustment (default: 0.02).",
+    )
+    parser.add_argument(
+        "--standard-contract",
+        action="store_true",
+        default=False,
+        help="Export JSON conforming strictly to the unified output schema contract.",
+    )
+    parser.add_argument(
         "--no-rank",
         action="store_true",
         help="Disable ranking candidates by combined desirability score.",
@@ -137,15 +155,18 @@ def main(argv: List[str] = None):
 
     print(f"[+] Loaded {len(records)} sequence(s) successfully.")
 
+    active_profile = args.profile if args.profile is not None else args.candidate_type
+    target_prev = float(args.target_prevalence)
+
     # 2. Run profiling
-    print(f"[*] Characterizing peptides (Target: {args.candidate_type.upper()})...")
+    print(f"[*] Characterizing peptides (Profile: {active_profile.upper()}, Target Prev: {target_prev:.2%})...")
     profiles = profile_multiple_sequences(
         records=records,
         organism_type=args.organism,
         tox_threshold=args.tox_thresh,
         alg_threshold=args.alg_thresh,
         ant_threshold=args.ant_thresh,
-        candidate_type=args.candidate_type,
+        candidate_type=active_profile,
         rank_candidates=not args.no_rank,
         use_docker=args.use_docker,
         use_api=args.use_api,
@@ -168,6 +189,30 @@ def main(argv: List[str] = None):
 
     # 4. Export reports
     generated = export_reports(profiles, output_prefix=args.output, formats=formats)
+
+    # Export standard contract JSON
+    if "json" in formats:
+        from src.api import serialize_to_standard_contract
+        import json as json_lib
+
+        standard_contracts = [
+            serialize_to_standard_contract(
+                p,
+                profile_type=active_profile,
+                target_prevalence=target_prev,
+            )
+            for p in profiles
+        ]
+        contract_data = standard_contracts[0] if len(standard_contracts) == 1 else standard_contracts
+
+        base_path = out_path.with_suffix("") if out_path.suffix.lower() in [".csv", ".json", ".html"] else out_path
+        contract_json_path = base_path.with_name(f"{base_path.name}.contract.json")
+        contract_json_path.write_text(json_lib.dumps(contract_data, indent=2), encoding="utf-8")
+        generated["contract_json"] = contract_json_path
+
+        if args.standard_contract:
+            # Overwrite main json with the exact standard contract
+            generated["json"].write_text(json_lib.dumps(contract_data, indent=2), encoding="utf-8")
 
     elapsed = time.time() - start_time
     print(f"\n[+] Analysis complete in {elapsed:.2f} seconds.")

@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "n_sequences": 512,
+    "n_folds": 5,
+    "timestamp": "2026-10-02 19:01:39",
+    "target_screening_prevalence": 0.02
+  },
+  "endpoints": {
+    "toxicity": {
+      "baseline": {
+        "overall": {
+          "auroc": 0.7967,
+          "auprc": 0.6788,
+          "balanced_accuracy": 0.7358,
+          "mcc": 0.4826,
+          "brier_score": 0.1575,
+          "ece": 0.1165
+        },
+        "confidence_intervals_95": {
+          "auroc": {
+            "point_estimate": 0.7968,
+            "ci_lower_95": 0.7399,
+            "ci_upper_95": 0.8518
+          },
+          "auprc": {
+            "point_estimate": 0.6799,
+            "ci_lower_95": 0.5778,
+            "ci_upper_95": 0.7646
+          },
+          "balanced_accuracy": {
+            "point_estimate": 0.7349,
+            "ci_lower_95": 0.6841,
+            "ci_upper_95": 0.7876
+          },
+          "mcc": {
+            "point_estimate": 0.4806,
+            "ci_lower_95": 0.3815,
+            "ci_upper_95": 0.5826
+          },
+          "sensitivity": {
+            "point_estimate": 0.5965,
+            "ci_lower_95": 0.5039,
+            "ci_upper_95": 0.6879
+          },
+          "specificity": {
+            "point_estimate": 0.8733,
+            "ci_lower_95": 0.8389,
+            "ci_upper_95": 0.9084
+          },
+          "ppv": {
+            "point_estimate": 0.6421,
+            "ci_lower_95": 0.5455,
+            "ci_upper_95": 0.7397
+          },
+          "npv": {
+            "point_estimate": 0.8499,
+            "ci_lower_95": 0.8068,
+            "ci_upper_95": 0.8907
+          },
+          "brier_score": {
+            "point_estimate": 0.1573,
+            "ci_lower_95": 0.1253,
+            "ci_upper_95": 0.1875
+          },
+          "log_loss": {
+            "point_estimate": 0.8242,
+            "ci_lower_95": 0.5863,
+            "ci_upper_95": 1.0897
+          },
+          "adaptive_ece_15bins": {
+            "point_estimate": 0.1276,
+            "ci_lower_95": 0.092,
+            "ci_upper_95": 0.161
+          }
+        }
+      },
+      "final_system": {
+        "overall": {
+          "auroc": 0.8639,
+          "auprc": 0.7243,
+          "balanced_accuracy": 0.7135,
+          "mcc": 0.4859,
+          "brier_score": 0.1278,
+          "ece": 0.0483
+        },
+        "confidence_intervals_95": {
+          "auroc": {
+            "point_estimate": 0.8625,
+            "ci_lower_95": 0.8155,
+            "ci_upper_95": 0.9029
+          },
+          "auprc": {
+            "point_estimate": 0.7207,
+            "ci_lower_95": 0.6086,
+            "ci_upper_95": 0.8178
+          },
+          "balanced_accuracy": {
+            "point_estimate": 0.7112,
+            "ci_lower_95": 0.6553,
+            "ci_upper_95": 0.7654
+          },
+          "mcc": {
+            "point_estimate": 0.4806,
+            "ci_lower_95": 0.3695,
+            "ci_upper_95": 0.5808
+          },
+          "sensitivity": {
+            "point_estimate": 0.4961,
+            "ci_lower_95": 0.3953,
+            "ci_upper_95": 0.6038
+          },
+          "specificity": {
+            "point_estimate": 0.9264,
+            "ci_lower_95": 0.8949,
+            "ci_upper_95": 0.9534
+          },
+          "ppv": {
+            "point_estimate": 0.7194,
+            "ci_lower_95": 0.5979,
+            "ci_upper_95": 0.8219
+          },
+          "npv": {
+            "point_estimate": 0.828,
+            "ci_lower_95": 0.7823,
+            "ci_upper_95": 0.8673
+          },
+          "brier_score": {
+            "point_estimate": 0.1281,
+            "ci_lower_95": 0.1081,
+            "ci_upper_95": 0.1501
+          },
+          "log_loss": {
+            "point_estimate": 0.4086,
+            "ci_lower_95": 0.3524,
+            "ci_upper_95": 0.4702
+          },
+          "adaptive_ece_15bins": {
+            "point_estimate": 0.0729,
+            "ci_lower_95": 0.047,
+            "ci_upper_95": 0.1007
+          }
+        },
+        "conformal": {
+          "empirical_coverage_overall": 0.957,
+          "coverage_class_0": 0.9676,
+          "coverage_class_1": 0.9296,
+          "mean_set_size": 1.5859,
+          "uncertain_rate": 0.5859,
+          "empty_rate": 0.0
+        },
+        "applicability_domain": {
+          "in_distribution_abstention_rate": 0.0371
+        }
+      }
+    },
+    "antigenicity": {
+      "baseline": {
+        "overall": {
+          "auroc": 0.7129,
+          "auprc": 0.3204,
+          "balanced_accuracy": 0.6715,
+          "mcc": 0.3288,
+          "brier_score": 0.1835,
+          "ece": 0.1629
+        },
+        "confidence_intervals_95": {
+          "auroc": {
+            "point_estimate": 0.7134,
+            "ci_lower_95": 0.6487,
+            "ci_upper_95": 0.7763
+          },
+          "auprc": {
+            "point_estimate": 0.3302,
+            "ci_lower_95": 0.2406,
+            "ci_upper_95": 0.4341
+          },
+          "balanced_accuracy": {
+            "point_estimate": 0.6721,
+            "ci_lower_95": 0.6111,
+            "ci_upper_95": 0.7344
+          },
+          "mcc": {
+            "point_estimate": 0.3298,
+            "ci_lower_95": 0.2105,
+            "ci_upper_95": 0.4485
+          },
+          "sensitivity": {
+            "point_estimate": 0.4856,
+            "ci_lower_95": 0.3711,
+            "ci_upper_95": 0.6042
+          },
+          "specificity": {
+            "point_estimate": 0.8587,
+            "ci_lower_95": 0.8186,
+            "ci_upper_95": 0.9002
+          },
+          "ppv": {
+            "point_estimate": 0.4343,
+            "ci_lower_95": 0.3204,
+            "ci_upper_95": 0.5537
+          },
+          "npv": {
+            "point_estimate": 0.8823,
+            "ci_lower_95": 0.8471,
+            "ci_upper_95": 0.9149
+          },
+          "brier_score": {
+            "point_estimate": 0.1834,
+            "ci_lower_95": 0.1493,
+            "ci_upper_95": 0.2186
+          },
+          "log_loss": {
+            "point_estimate": 1.044,
+            "ci_lower_95": 0.7766,
+            "ci_upper_95": 1.3325
+          },
+          "adaptive_ece_15bins": {
+            "point_estimate": 0.1674,
+            "ci_lower_95": 0.1305,
+            "ci_upper_95": 0.2035
+          }
+        }
+      },
+      "final_system": {
+        "overall": {
+          "auroc": 0.8495,
+          "auprc": 0.6067,
+          "balanced_accuracy": 0.7169,
+          "mcc": 0.4991,
+          "brier_score": 0.101,
+          "ece": 0.0376
+        },
+        "confidence_intervals_95": {
+          "auroc": {
+            "point_estimate": 0.8509,
+            "ci_lower_95": 0.7977,
+            "ci_upper_95": 0.8999
+          },
+          "auprc": {
+            "point_estimate": 0.6164,
+            "ci_lower_95": 0.495,
+            "ci_upper_95": 0.7263
+          },
+          "balanced_accuracy": {
+            "point_estimate": 0.7174,
+            "ci_lower_95": 0.6653,
+            "ci_upper_95": 0.7716
+          },
+          "mcc": {
+            "point_estimate": 0.4995,
+            "ci_lower_95": 0.3921,
+            "ci_upper_95": 0.6044
+          },
+          "sensitivity": {
+            "point_estimate": 0.4851,
+            "ci_lower_95": 0.383,
+            "ci_upper_95": 0.5926
+          },
+          "specificity": {
+            "point_estimate": 0.9496,
+            "ci_lower_95": 0.9213,
+            "ci_upper_95": 0.9739
+          },
+          "ppv": {
+            "point_estimate": 0.6834,
+            "ci_lower_95": 0.5464,
+            "ci_upper_95": 0.8116
+          },
+          "npv": {
+            "point_estimate": 0.892,
+            "ci_lower_95": 0.8575,
+            "ci_upper_95": 0.9234
+          },
+          "brier_score": {
+            "point_estimate": 0.1011,
+            "ci_lower_95": 0.0797,
+            "ci_upper_95": 0.1226
+          },
+          "log_loss": {
+            "point_estimate": 0.3443,
+            "ci_lower_95": 0.2768,
+            "ci_upper_95": 0.4183
+          },
+          "adaptive_ece_15bins": {
+            "point_estimate": 0.0586,
+            "ci_lower_95": 0.0363,
+            "ci_upper_95": 0.0831
+          }
+        },
+        "conformal": {
+          "empirical_coverage_overall": 0.9219,
+          "coverage_class_0": 0.9069,
+          "coverage_class_1": 0.9892,
+          "mean_set_size": 1.7227,
+          "uncertain_rate": 0.7227,
+          "empty_rate": 0.0
+        },
+        "applicability_domain": {
+          "in_distribution_abstention_rate": 0.0371
+        }
+      }
+    },
+    "allergenicity": {
+      "baseline": {
+        "overall": {
+          "auroc": 0.7726,
+          "auprc": 0.3863,
+          "balanced_accuracy": 0.6549,
+          "mcc": 0.2962,
+          "brier_score": 0.1726,
+          "ece": 0.131
+        },
+        "confidence_intervals_95": {
+          "auroc": {
+            "point_estimate": 0.7714,
+            "ci_lower_95": 0.7215,
+            "ci_upper_95": 0.8207
+          },
+          "auprc": {
+            "point_estimate": 0.3929,
+            "ci_lower_95": 0.306,
+            "ci_upper_95": 0.4943
+          },
+          "balanced_accuracy": {
+            "point_estimate": 0.6535,
+            "ci_lower_95": 0.6004,
+            "ci_upper_95": 0.7067
+          },
+          "mcc": {
+            "point_estimate": 0.2935,
+            "ci_lower_95": 0.1921,
+            "ci_upper_95": 0.398
+          },
+          "sensitivity": {
+            "point_estimate": 0.4672,
+            "ci_lower_95": 0.3684,
+            "ci_upper_95": 0.5673
+          },
+          "specificity": {
+            "point_estimate": 0.8399,
+            "ci_lower_95": 0.8025,
+            "ci_upper_95": 0.8768
+          },
+          "ppv": {
+            "point_estimate": 0.4145,
+            "ci_lower_95": 0.319,
+            "ci_upper_95": 0.5221
+          },
+          "npv": {
+            "point_estimate": 0.8666,
+            "ci_lower_95": 0.8284,
+            "ci_upper_95": 0.9019
+          },
+          "brier_score": {
+            "point_estimate": 0.173,
+            "ci_lower_95": 0.1458,
+            "ci_upper_95": 0.2015
+          },
+          "log_loss": {
+            "point_estimate": 0.7464,
+            "ci_lower_95": 0.5422,
+            "ci_upper_95": 0.9722
+          },
+          "adaptive_ece_15bins": {
+            "point_estimate": 0.1385,
+            "ci_lower_95": 0.1069,
+            "ci_upper_95": 0.1732
+          }
+        }
+      },
+      "final_system": {
+        "overall": {
+          "auroc": 0.8512,
+          "auprc": 0.5937,
+          "balanced_accuracy": 0.6947,
+          "mcc": 0.4493,
+          "brier_score": 0.117,
+          "ece": 0.0566
+        },
+        "confidence_intervals_95": {
+          "auroc": {
+            "point_estimate": 0.8513,
+            "ci_lower_95": 0.8044,
+            "ci_upper_95": 0.8903
+          },
+          "auprc": {
+            "point_estimate": 0.5955,
+            "ci_lower_95": 0.4874,
+            "ci_upper_95": 0.6958
+          },
+          "balanced_accuracy": {
+            "point_estimate": 0.6937,
+            "ci_lower_95": 0.6395,
+            "ci_upper_95": 0.7471
+          },
+          "mcc": {
+            "point_estimate": 0.4462,
+            "ci_lower_95": 0.3357,
+            "ci_upper_95": 0.5493
+          },
+          "sensitivity": {
+            "point_estimate": 0.4485,
+            "ci_lower_95": 0.3398,
+            "ci_upper_95": 0.5542
+          },
+          "specificity": {
+            "point_estimate": 0.9389,
+            "ci_lower_95": 0.9142,
+            "ci_upper_95": 0.961
+          },
+          "ppv": {
+            "point_estimate": 0.6399,
+            "ci_lower_95": 0.5233,
+            "ci_upper_95": 0.7501
+          },
+          "npv": {
+            "point_estimate": 0.8752,
+            "ci_lower_95": 0.838,
+            "ci_upper_95": 0.9115
+          },
+          "brier_score": {
+            "point_estimate": 0.1171,
+            "ci_lower_95": 0.0953,
+            "ci_upper_95": 0.1388
+          },
+          "log_loss": {
+            "point_estimate": 0.3764,
+            "ci_lower_95": 0.3117,
+            "ci_upper_95": 0.4419
+          },
+          "adaptive_ece_15bins": {
+            "point_estimate": 0.0674,
+            "ci_lower_95": 0.0417,
+            "ci_upper_95": 0.1
+          }
+        },
+        "conformal": {
+          "empirical_coverage_overall": 0.9336,
+          "coverage_class_0": 0.9393,
+          "coverage_class_1": 0.91,
+          "mean_set_size": 1.5762,
+          "uncertain_rate": 0.5762,
+          "empty_rate": 0.0
+        },
+        "applicability_domain": {
+          "in_distribution_abstention_rate": 0.0371
+        }
+      }
+    }
+  },
+  "length_bin_breakdown": {
+    "toxicity": {
+      "<15": {
+        "n_samples": 48,
+        "n_positives": 24,
+        "baseline_auroc": 0.5425,
+        "final_auroc": 0.6858,
+        "baseline_brier": 0.4245,
+        "final_brier": 0.2436,
+        "final_ece": 0.1654,
+        "conformal_coverage": 0.8958,
+        "mean_set_size": 1.6042
+      },
+      "15-24": {
+        "n_samples": 16,
+        "n_positives": 11,
+        "baseline_auroc": 0.6,
+        "final_auroc": 0.8364,
+        "baseline_brier": 0.4385,
+        "final_brier": 0.173,
+        "final_ece": 0.2172,
+        "conformal_coverage": 0.9375,
+        "mean_set_size": 1.4375
+      },
+      "25-49": {
+        "n_samples": 50,
+        "n_positives": 20,
+        "baseline_auroc": 0.8917,
+        "final_auroc": 0.9117,
+        "baseline_brier": 0.1729,
+        "final_brier": 0.1167,
+        "final_ece": 0.084,
+        "conformal_coverage": 0.96,
+        "mean_set_size": 1.48
+      },
+      "50+": {
+        "n_samples": 398,
+        "n_positives": 87,
+        "baseline_auroc": 0.8552,
+        "final_auroc": 0.8706,
+        "baseline_brier": 0.112,
+        "final_brier": 0.1134,
+        "final_ece": 0.0622,
+        "conformal_coverage": 0.9648,
+        "mean_set_size": 1.603
+      }
+    },
+    "antigenicity": {
+      "<15": {
+        "n_samples": 48,
+        "n_positives": 0,
+        "baseline_auroc": 0.5,
+        "final_auroc": 0.5,
+        "baseline_brier": 0.3923,
+        "final_brier": 0.0033,
+        "final_ece": 0.0334,
+        "conformal_coverage": 1.0,
+        "mean_set_size": 1.75
+      },
+      "15-24": {
+        "n_samples": 16,
+        "n_positives": 0,
+        "baseline_auroc": 0.5,
+        "final_auroc": 0.5,
+        "baseline_brier": 0.2289,
+        "final_brier": 0.0185,
+        "final_ece": 0.065,
+        "conformal_coverage": 0.9375,
+        "mean_set_size": 1.875
+      },
+      "25-49": {
+        "n_samples": 50,
+        "n_positives": 1,
+        "baseline_auroc": 0.0612,
+        "final_auroc": 0.0816,
+        "baseline_brier": 0.1924,
+        "final_brier": 0.0549,
+        "final_ece": 0.1411,
+        "conformal_coverage": 0.86,
+        "mean_set_size": 1.8
+      },
+      "50+": {
+        "n_samples": 398,
+        "n_positives": 92,
+        "baseline_auroc": 0.7507,
+        "final_auroc": 0.8404,
+        "baseline_brier": 0.1553,
+        "final_brier": 0.1218,
+        "final_ece": 0.0522,
+        "conformal_coverage": 0.9196,
+        "mean_set_size": 1.7035
+      }
+    },
+    "allergenicity": {
+      "<15": {
+        "n_samples": 48,
+        "n_positives": 0,
+        "baseline_auroc": 0.5,
+        "final_auroc": 0.5,
+        "baseline_brier": 0.1888,
+        "final_brier": 0.0075,
+        "final_ece": 0.0458,
+        "conformal_coverage": 1.0,
+        "mean_set_size": 1.4792
+      },
+      "15-24": {
+        "n_samples": 16,
+        "n_positives": 1,
+        "baseline_auroc": 0.4667,
+        "final_auroc": 0.2,
+        "baseline_brier": 0.1778,
+        "final_brier": 0.0646,
+        "final_ece": 0.0955,
+        "conformal_coverage": 0.9375,
+        "mean_set_size": 1.375
+      },
+      "25-49": {
+        "n_samples": 50,
+        "n_positives": 0,
+        "baseline_auroc": 0.5,
+        "final_auroc": 0.5,
+        "baseline_brier": 0.1545,
+        "final_brier": 0.0112,
+        "final_ece": 0.0569,
+        "conformal_coverage": 1.0,
+        "mean_set_size": 1.64
+      },
+      "50+": {
+        "n_samples": 398,
+        "n_positives": 99,
+        "baseline_auroc": 0.7839,
+        "final_auroc": 0.8242,
+        "baseline_brier": 0.1727,
+        "final_brier": 0.1456,
+        "final_ece": 0.0773,
+        "conformal_coverage": 0.9171,
+        "mean_set_size": 1.5879
+      }
+    }
+  },
+  "conformal_and_ood_summary": {}
+}
