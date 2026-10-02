@@ -1,0 +1,4608 @@
+{
+  "parity_test": {
+    "model_id": "facebook/esm2_t6_8M_UR50D",
+    "n_samples": 50,
+    "mean_cosine_similarity": 0.9985737800598145,
+    "min_cosine_similarity": 0.996015191078186,
+    "max_cosine_similarity": 0.9991009831428528,
+    "threshold": 0.99,
+    "parity_passed": true
+  },
+  "non_canonical_audit": {
+    "total_sequences": 512,
+    "flagged_ood_count": 0,
+    "substitutions_summary": []
+  },
+  "endpoints": {
+    "is_antigen": {
+      "linear_probe": {
+        "ACC-only (125-D)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 93,
+            "roc_auc": {
+              "estimate": 0.6647,
+              "ci_95": [
+                0.6647,
+                0.6647
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.2734,
+              "ci_95": [
+                0.2734,
+                0.2734
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5192,
+              "ci_95": [
+                0.5192,
+                0.5192
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.1678,
+              "ci_95": [
+                0.1678,
+                0.1678
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.4286,
+                "ci_95": [
+                  0.4286,
+                  0.4286
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0172,
+                "ci_95": [
+                  0.0172,
+                  0.0172
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.4388,
+                "ci_95": [
+                  0.4388,
+                  0.4388
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 92,
+              "roc_auc": {
+                "estimate": 0.6758,
+                "ci_95": [
+                  0.6758,
+                  0.6758
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.3799,
+                "ci_95": [
+                  0.3799,
+                  0.3799
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5325,
+                "ci_95": [
+                  0.5325,
+                  0.5325
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.1935,
+                "ci_95": [
+                  0.1935,
+                  0.1935
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (320-D Mean)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 93,
+            "roc_auc": {
+              "estimate": 0.8885,
+              "ci_95": [
+                0.8885,
+                0.8885
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6996,
+              "ci_95": [
+                0.6996,
+                0.6996
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7414,
+              "ci_95": [
+                0.7414,
+                0.7414
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6194,
+              "ci_95": [
+                0.6194,
+                0.6194
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.0204,
+                "ci_95": [
+                  0.0204,
+                  0.0204
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0102,
+                "ci_95": [
+                  0.0102,
+                  0.0102
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.4898,
+                "ci_95": [
+                  0.4898,
+                  0.4898
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 92,
+              "roc_auc": {
+                "estimate": 0.882,
+                "ci_95": [
+                  0.882,
+                  0.882
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7173,
+                "ci_95": [
+                  0.7173,
+                  0.7173
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7396,
+                "ci_95": [
+                  0.7396,
+                  0.7396
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6275,
+                "ci_95": [
+                  0.6275,
+                  0.6275
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (640-D Mean+Max)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 93,
+            "roc_auc": {
+              "estimate": 0.8837,
+              "ci_95": [
+                0.8837,
+                0.8837
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6842,
+              "ci_95": [
+                0.6842,
+                0.6842
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7605,
+              "ci_95": [
+                0.7605,
+                0.7605
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.646,
+              "ci_95": [
+                0.646,
+                0.646
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.0408,
+                "ci_95": [
+                  0.0408,
+                  0.0408
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0104,
+                "ci_95": [
+                  0.0104,
+                  0.0104
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 92,
+              "roc_auc": {
+                "estimate": 0.8756,
+                "ci_95": [
+                  0.8756,
+                  0.8756
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6993,
+                "ci_95": [
+                  0.6993,
+                  0.6993
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7565,
+                "ci_95": [
+                  0.7565,
+                  0.7565
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.65,
+                "ci_95": [
+                  0.65,
+                  0.65
+                ]
+              }
+            }
+          }
+        },
+        "ACC+ESM (445-D Concat)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 93,
+            "roc_auc": {
+              "estimate": 0.8871,
+              "ci_95": [
+                0.8871,
+                0.8871
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6341,
+              "ci_95": [
+                0.6341,
+                0.6341
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7449,
+              "ci_95": [
+                0.7449,
+                0.7449
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6316,
+              "ci_95": [
+                0.6316,
+                0.6316
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.2653,
+                "ci_95": [
+                  0.2653,
+                  0.2653
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0135,
+                "ci_95": [
+                  0.0135,
+                  0.0135
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.4898,
+                "ci_95": [
+                  0.4898,
+                  0.4898
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 92,
+              "roc_auc": {
+                "estimate": 0.884,
+                "ci_95": [
+                  0.884,
+                  0.884
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6731,
+                "ci_95": [
+                  0.6731,
+                  0.6731
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7462,
+                "ci_95": [
+                  0.7462,
+                  0.7462
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6443,
+                "ci_95": [
+                  0.6443,
+                  0.6443
+                ]
+              }
+            }
+          }
+        }
+      },
+      "mlp_probe": {
+        "ACC-only (125-D)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 93,
+            "roc_auc": {
+              "estimate": 0.6386,
+              "ci_95": [
+                0.6386,
+                0.6386
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.2737,
+              "ci_95": [
+                0.2737,
+                0.2737
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5048,
+              "ci_95": [
+                0.5048,
+                0.5048
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.04,
+              "ci_95": [
+                0.04,
+                0.04
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.0816,
+                "ci_95": [
+                  0.0816,
+                  0.0816
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0109,
+                "ci_95": [
+                  0.0109,
+                  0.0109
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 92,
+              "roc_auc": {
+                "estimate": 0.5674,
+                "ci_95": [
+                  0.5674,
+                  0.5674
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.292,
+                "ci_95": [
+                  0.292,
+                  0.292
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5027,
+                "ci_95": [
+                  0.5027,
+                  0.5027
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0404,
+                "ci_95": [
+                  0.0404,
+                  0.0404
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (320-D Mean)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 93,
+            "roc_auc": {
+              "estimate": 0.8778,
+              "ci_95": [
+                0.8778,
+                0.8778
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6565,
+              "ci_95": [
+                0.6565,
+                0.6565
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.6846,
+              "ci_95": [
+                0.6846,
+                0.6846
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.5211,
+              "ci_95": [
+                0.5211,
+                0.5211
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.9796,
+                "ci_95": [
+                  0.9796,
+                  0.9796
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.25,
+                "ci_95": [
+                  0.25,
+                  0.25
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.4898,
+                "ci_95": [
+                  0.4898,
+                  0.4898
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 92,
+              "roc_auc": {
+                "estimate": 0.8612,
+                "ci_95": [
+                  0.8612,
+                  0.8612
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.673,
+                "ci_95": [
+                  0.673,
+                  0.673
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6831,
+                "ci_95": [
+                  0.6831,
+                  0.6831
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5286,
+                "ci_95": [
+                  0.5286,
+                  0.5286
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (640-D Mean+Max)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 93,
+            "roc_auc": {
+              "estimate": 0.8562,
+              "ci_95": [
+                0.8562,
+                0.8562
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.7021,
+              "ci_95": [
+                0.7021,
+                0.7021
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7169,
+              "ci_95": [
+                0.7169,
+                0.7169
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.5811,
+              "ci_95": [
+                0.5811,
+                0.5811
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.3878,
+                "ci_95": [
+                  0.3878,
+                  0.3878
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0161,
+                "ci_95": [
+                  0.0161,
+                  0.0161
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.4898,
+                "ci_95": [
+                  0.4898,
+                  0.4898
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 92,
+              "roc_auc": {
+                "estimate": 0.8338,
+                "ci_95": [
+                  0.8338,
+                  0.8338
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7178,
+                "ci_95": [
+                  0.7178,
+                  0.7178
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7157,
+                "ci_95": [
+                  0.7157,
+                  0.7157
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.589,
+                "ci_95": [
+                  0.589,
+                  0.589
+                ]
+              }
+            }
+          }
+        },
+        "ACC+ESM (445-D Concat)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 93,
+            "roc_auc": {
+              "estimate": 0.8862,
+              "ci_95": [
+                0.8862,
+                0.8862
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6581,
+              "ci_95": [
+                0.6581,
+                0.6581
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7157,
+              "ci_95": [
+                0.7157,
+                0.7157
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.5772,
+              "ci_95": [
+                0.5772,
+                0.5772
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.449,
+                "ci_95": [
+                  0.449,
+                  0.449
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0179,
+                "ci_95": [
+                  0.0179,
+                  0.0179
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.4898,
+                "ci_95": [
+                  0.4898,
+                  0.4898
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 92,
+              "roc_auc": {
+                "estimate": 0.8807,
+                "ci_95": [
+                  0.8807,
+                  0.8807
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6854,
+                "ci_95": [
+                  0.6854,
+                  0.6854
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7157,
+                "ci_95": [
+                  0.7157,
+                  0.7157
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.589,
+                "ci_95": [
+                  0.589,
+                  0.589
+                ]
+              }
+            }
+          }
+        }
+      },
+      "stacked_ensemble": {
+        "overall": {
+          "n_samples": 512,
+          "positives": 93,
+          "roc_auc": {
+            "estimate": 0.835,
+            "ci_95": [
+              0.835,
+              0.835
+            ]
+          },
+          "pr_auc": {
+            "estimate": 0.6022,
+            "ci_95": [
+              0.6022,
+              0.6022
+            ]
+          },
+          "balanced_accuracy": {
+            "estimate": 0.6374,
+            "ci_95": [
+              0.6374,
+              0.6374
+            ]
+          },
+          "f1_score": {
+            "estimate": 0.4242,
+            "ci_95": [
+              0.4242,
+              0.4242
+            ]
+          }
+        },
+        "by_length": {
+          "<15 aa": {
+            "n_samples": 48,
+            "roc_auc": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "15-24 aa": {
+            "n_samples": 16,
+            "roc_auc": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "25-49 aa": {
+            "n_samples": 50,
+            "positives": 1,
+            "roc_auc": {
+              "estimate": 0.0816,
+              "ci_95": [
+                0.0816,
+                0.0816
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.0109,
+              "ci_95": [
+                0.0109,
+                0.0109
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "50+ aa": {
+            "n_samples": 398,
+            "positives": 92,
+            "roc_auc": {
+              "estimate": 0.8407,
+              "ci_95": [
+                0.8407,
+                0.8407
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6384,
+              "ci_95": [
+                0.6384,
+                0.6384
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.6342,
+              "ci_95": [
+                0.6342,
+                0.6342
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.4275,
+              "ci_95": [
+                0.4275,
+                0.4275
+              ]
+            }
+          }
+        }
+      }
+    },
+    "is_toxic": {
+      "linear_probe": {
+        "ACC-only (125-D)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 142,
+            "roc_auc": {
+              "estimate": 0.7147,
+              "ci_95": [
+                0.7147,
+                0.7147
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.5358,
+              "ci_95": [
+                0.5358,
+                0.5358
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.616,
+              "ci_95": [
+                0.616,
+                0.616
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.402,
+              "ci_95": [
+                0.402,
+                0.402
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "positives": 24,
+              "roc_auc": {
+                "estimate": 0.6875,
+                "ci_95": [
+                  0.6875,
+                  0.6875
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7303,
+                "ci_95": [
+                  0.7303,
+                  0.7303
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6875,
+                "ci_95": [
+                  0.6875,
+                  0.6875
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6512,
+                "ci_95": [
+                  0.6512,
+                  0.6512
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 11,
+              "roc_auc": {
+                "estimate": 0.6182,
+                "ci_95": [
+                  0.6182,
+                  0.6182
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7015,
+                "ci_95": [
+                  0.7015,
+                  0.7015
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6182,
+                "ci_95": [
+                  0.6182,
+                  0.6182
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.7,
+                "ci_95": [
+                  0.7,
+                  0.7
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 20,
+              "roc_auc": {
+                "estimate": 0.8567,
+                "ci_95": [
+                  0.8567,
+                  0.8567
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.8754,
+                "ci_95": [
+                  0.8754,
+                  0.8754
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.8,
+                "ci_95": [
+                  0.8,
+                  0.8
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.75,
+                "ci_95": [
+                  0.75,
+                  0.75
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 87,
+              "roc_auc": {
+                "estimate": 0.6657,
+                "ci_95": [
+                  0.6657,
+                  0.6657
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.3595,
+                "ci_95": [
+                  0.3595,
+                  0.3595
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5235,
+                "ci_95": [
+                  0.5235,
+                  0.5235
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.1468,
+                "ci_95": [
+                  0.1468,
+                  0.1468
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (320-D Mean)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 142,
+            "roc_auc": {
+              "estimate": 0.879,
+              "ci_95": [
+                0.879,
+                0.879
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.7693,
+              "ci_95": [
+                0.7693,
+                0.7693
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7623,
+              "ci_95": [
+                0.7623,
+                0.7623
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6667,
+              "ci_95": [
+                0.6667,
+                0.6667
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "positives": 24,
+              "roc_auc": {
+                "estimate": 0.6927,
+                "ci_95": [
+                  0.6927,
+                  0.6927
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7582,
+                "ci_95": [
+                  0.7582,
+                  0.7582
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6042,
+                "ci_95": [
+                  0.6042,
+                  0.6042
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5366,
+                "ci_95": [
+                  0.5366,
+                  0.5366
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 11,
+              "roc_auc": {
+                "estimate": 0.8727,
+                "ci_95": [
+                  0.8727,
+                  0.8727
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9436,
+                "ci_95": [
+                  0.9436,
+                  0.9436
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7636,
+                "ci_95": [
+                  0.7636,
+                  0.7636
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.8,
+                "ci_95": [
+                  0.8,
+                  0.8
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 20,
+              "roc_auc": {
+                "estimate": 0.9617,
+                "ci_95": [
+                  0.9617,
+                  0.9617
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9531,
+                "ci_95": [
+                  0.9531,
+                  0.9531
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.875,
+                "ci_95": [
+                  0.875,
+                  0.875
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.85,
+                "ci_95": [
+                  0.85,
+                  0.85
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 87,
+              "roc_auc": {
+                "estimate": 0.8834,
+                "ci_95": [
+                  0.8834,
+                  0.8834
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6915,
+                "ci_95": [
+                  0.6915,
+                  0.6915
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7552,
+                "ci_95": [
+                  0.7552,
+                  0.7552
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6369,
+                "ci_95": [
+                  0.6369,
+                  0.6369
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (640-D Mean+Max)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 142,
+            "roc_auc": {
+              "estimate": 0.8754,
+              "ci_95": [
+                0.8754,
+                0.8754
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.7672,
+              "ci_95": [
+                0.7672,
+                0.7672
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7506,
+              "ci_95": [
+                0.7506,
+                0.7506
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6464,
+              "ci_95": [
+                0.6464,
+                0.6464
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "positives": 24,
+              "roc_auc": {
+                "estimate": 0.7031,
+                "ci_95": [
+                  0.7031,
+                  0.7031
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7699,
+                "ci_95": [
+                  0.7699,
+                  0.7699
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6667,
+                "ci_95": [
+                  0.6667,
+                  0.6667
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.619,
+                "ci_95": [
+                  0.619,
+                  0.619
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 11,
+              "roc_auc": {
+                "estimate": 0.8545,
+                "ci_95": [
+                  0.8545,
+                  0.8545
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9376,
+                "ci_95": [
+                  0.9376,
+                  0.9376
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.8091,
+                "ci_95": [
+                  0.8091,
+                  0.8091
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.8571,
+                "ci_95": [
+                  0.8571,
+                  0.8571
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 20,
+              "roc_auc": {
+                "estimate": 0.97,
+                "ci_95": [
+                  0.97,
+                  0.97
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9702,
+                "ci_95": [
+                  0.9702,
+                  0.9702
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.9,
+                "ci_95": [
+                  0.9,
+                  0.9
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.878,
+                "ci_95": [
+                  0.878,
+                  0.878
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 87,
+              "roc_auc": {
+                "estimate": 0.8687,
+                "ci_95": [
+                  0.8687,
+                  0.8687
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6775,
+                "ci_95": [
+                  0.6775,
+                  0.6775
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7152,
+                "ci_95": [
+                  0.7152,
+                  0.7152
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.566,
+                "ci_95": [
+                  0.566,
+                  0.566
+                ]
+              }
+            }
+          }
+        },
+        "ACC+ESM (445-D Concat)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 142,
+            "roc_auc": {
+              "estimate": 0.879,
+              "ci_95": [
+                0.879,
+                0.879
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.7778,
+              "ci_95": [
+                0.7778,
+                0.7778
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7853,
+              "ci_95": [
+                0.7853,
+                0.7853
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.7027,
+              "ci_95": [
+                0.7027,
+                0.7027
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "positives": 24,
+              "roc_auc": {
+                "estimate": 0.7135,
+                "ci_95": [
+                  0.7135,
+                  0.7135
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7219,
+                "ci_95": [
+                  0.7219,
+                  0.7219
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6667,
+                "ci_95": [
+                  0.6667,
+                  0.6667
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6522,
+                "ci_95": [
+                  0.6522,
+                  0.6522
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 11,
+              "roc_auc": {
+                "estimate": 0.8364,
+                "ci_95": [
+                  0.8364,
+                  0.8364
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9374,
+                "ci_95": [
+                  0.9374,
+                  0.9374
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7636,
+                "ci_95": [
+                  0.7636,
+                  0.7636
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.8,
+                "ci_95": [
+                  0.8,
+                  0.8
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 20,
+              "roc_auc": {
+                "estimate": 0.9617,
+                "ci_95": [
+                  0.9617,
+                  0.9617
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9548,
+                "ci_95": [
+                  0.9548,
+                  0.9548
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.9167,
+                "ci_95": [
+                  0.9167,
+                  0.9167
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.9,
+                "ci_95": [
+                  0.9,
+                  0.9
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 87,
+              "roc_auc": {
+                "estimate": 0.8839,
+                "ci_95": [
+                  0.8839,
+                  0.8839
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7328,
+                "ci_95": [
+                  0.7328,
+                  0.7328
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7616,
+                "ci_95": [
+                  0.7616,
+                  0.7616
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6536,
+                "ci_95": [
+                  0.6536,
+                  0.6536
+                ]
+              }
+            }
+          }
+        }
+      },
+      "mlp_probe": {
+        "ACC-only (125-D)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 142,
+            "roc_auc": {
+              "estimate": 0.7072,
+              "ci_95": [
+                0.7072,
+                0.7072
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.5466,
+              "ci_95": [
+                0.5466,
+                0.5466
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.632,
+              "ci_95": [
+                0.632,
+                0.632
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.4335,
+              "ci_95": [
+                0.4335,
+                0.4335
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "positives": 24,
+              "roc_auc": {
+                "estimate": 0.6545,
+                "ci_95": [
+                  0.6545,
+                  0.6545
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6495,
+                "ci_95": [
+                  0.6495,
+                  0.6495
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5625,
+                "ci_95": [
+                  0.5625,
+                  0.5625
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.4,
+                "ci_95": [
+                  0.4,
+                  0.4
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 11,
+              "roc_auc": {
+                "estimate": 0.5455,
+                "ci_95": [
+                  0.5455,
+                  0.5455
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7368,
+                "ci_95": [
+                  0.7368,
+                  0.7368
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5727,
+                "ci_95": [
+                  0.5727,
+                  0.5727
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6316,
+                "ci_95": [
+                  0.6316,
+                  0.6316
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 20,
+              "roc_auc": {
+                "estimate": 0.8183,
+                "ci_95": [
+                  0.8183,
+                  0.8183
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.8358,
+                "ci_95": [
+                  0.8358,
+                  0.8358
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7833,
+                "ci_95": [
+                  0.7833,
+                  0.7833
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.7273,
+                "ci_95": [
+                  0.7273,
+                  0.7273
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 87,
+              "roc_auc": {
+                "estimate": 0.7182,
+                "ci_95": [
+                  0.7182,
+                  0.7182
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.4513,
+                "ci_95": [
+                  0.4513,
+                  0.4513
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5931,
+                "ci_95": [
+                  0.5931,
+                  0.5931
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.3276,
+                "ci_95": [
+                  0.3276,
+                  0.3276
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (320-D Mean)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 142,
+            "roc_auc": {
+              "estimate": 0.8819,
+              "ci_95": [
+                0.8819,
+                0.8819
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.7892,
+              "ci_95": [
+                0.7892,
+                0.7892
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7549,
+              "ci_95": [
+                0.7549,
+                0.7549
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6586,
+              "ci_95": [
+                0.6586,
+                0.6586
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "positives": 24,
+              "roc_auc": {
+                "estimate": 0.6823,
+                "ci_95": [
+                  0.6823,
+                  0.6823
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7477,
+                "ci_95": [
+                  0.7477,
+                  0.7477
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6042,
+                "ci_95": [
+                  0.6042,
+                  0.6042
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5581,
+                "ci_95": [
+                  0.5581,
+                  0.5581
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 11,
+              "roc_auc": {
+                "estimate": 0.8727,
+                "ci_95": [
+                  0.8727,
+                  0.8727
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9483,
+                "ci_95": [
+                  0.9483,
+                  0.9483
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7636,
+                "ci_95": [
+                  0.7636,
+                  0.7636
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.8,
+                "ci_95": [
+                  0.8,
+                  0.8
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 20,
+              "roc_auc": {
+                "estimate": 0.9267,
+                "ci_95": [
+                  0.9267,
+                  0.9267
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9238,
+                "ci_95": [
+                  0.9238,
+                  0.9238
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.875,
+                "ci_95": [
+                  0.875,
+                  0.875
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.85,
+                "ci_95": [
+                  0.85,
+                  0.85
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 87,
+              "roc_auc": {
+                "estimate": 0.8793,
+                "ci_95": [
+                  0.8793,
+                  0.8793
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7388,
+                "ci_95": [
+                  0.7388,
+                  0.7388
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7361,
+                "ci_95": [
+                  0.7361,
+                  0.7361
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6164,
+                "ci_95": [
+                  0.6164,
+                  0.6164
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (640-D Mean+Max)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 142,
+            "roc_auc": {
+              "estimate": 0.8349,
+              "ci_95": [
+                0.8349,
+                0.8349
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.7448,
+              "ci_95": [
+                0.7448,
+                0.7448
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7328,
+              "ci_95": [
+                0.7328,
+                0.7328
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6215,
+              "ci_95": [
+                0.6215,
+                0.6215
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "positives": 24,
+              "roc_auc": {
+                "estimate": 0.7274,
+                "ci_95": [
+                  0.7274,
+                  0.7274
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7976,
+                "ci_95": [
+                  0.7976,
+                  0.7976
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.625,
+                "ci_95": [
+                  0.625,
+                  0.625
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5909,
+                "ci_95": [
+                  0.5909,
+                  0.5909
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 11,
+              "roc_auc": {
+                "estimate": 0.9636,
+                "ci_95": [
+                  0.9636,
+                  0.9636
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9834,
+                "ci_95": [
+                  0.9834,
+                  0.9834
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.8091,
+                "ci_95": [
+                  0.8091,
+                  0.8091
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.8571,
+                "ci_95": [
+                  0.8571,
+                  0.8571
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 20,
+              "roc_auc": {
+                "estimate": 0.9683,
+                "ci_95": [
+                  0.9683,
+                  0.9683
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.966,
+                "ci_95": [
+                  0.966,
+                  0.966
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.9,
+                "ci_95": [
+                  0.9,
+                  0.9
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.878,
+                "ci_95": [
+                  0.878,
+                  0.878
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 87,
+              "roc_auc": {
+                "estimate": 0.8108,
+                "ci_95": [
+                  0.8108,
+                  0.8108
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6238,
+                "ci_95": [
+                  0.6238,
+                  0.6238
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6862,
+                "ci_95": [
+                  0.6862,
+                  0.6862
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5241,
+                "ci_95": [
+                  0.5241,
+                  0.5241
+                ]
+              }
+            }
+          }
+        },
+        "ACC+ESM (445-D Concat)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 142,
+            "roc_auc": {
+              "estimate": 0.8868,
+              "ci_95": [
+                0.8868,
+                0.8868
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.8168,
+              "ci_95": [
+                0.8168,
+                0.8168
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7855,
+              "ci_95": [
+                0.7855,
+                0.7855
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.7097,
+              "ci_95": [
+                0.7097,
+                0.7097
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "positives": 24,
+              "roc_auc": {
+                "estimate": 0.7101,
+                "ci_95": [
+                  0.7101,
+                  0.7101
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7363,
+                "ci_95": [
+                  0.7363,
+                  0.7363
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.75,
+                "ci_95": [
+                  0.75,
+                  0.75
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.7,
+                "ci_95": [
+                  0.7,
+                  0.7
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 11,
+              "roc_auc": {
+                "estimate": 0.8909,
+                "ci_95": [
+                  0.8909,
+                  0.8909
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9566,
+                "ci_95": [
+                  0.9566,
+                  0.9566
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.8091,
+                "ci_95": [
+                  0.8091,
+                  0.8091
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.8571,
+                "ci_95": [
+                  0.8571,
+                  0.8571
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "positives": 20,
+              "roc_auc": {
+                "estimate": 0.9883,
+                "ci_95": [
+                  0.9883,
+                  0.9883
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.9834,
+                "ci_95": [
+                  0.9834,
+                  0.9834
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.9333,
+                "ci_95": [
+                  0.9333,
+                  0.9333
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.9231,
+                "ci_95": [
+                  0.9231,
+                  0.9231
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 87,
+              "roc_auc": {
+                "estimate": 0.8806,
+                "ci_95": [
+                  0.8806,
+                  0.8806
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.765,
+                "ci_95": [
+                  0.765,
+                  0.765
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7476,
+                "ci_95": [
+                  0.7476,
+                  0.7476
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6351,
+                "ci_95": [
+                  0.6351,
+                  0.6351
+                ]
+              }
+            }
+          }
+        }
+      },
+      "stacked_ensemble": {
+        "overall": {
+          "n_samples": 512,
+          "positives": 142,
+          "roc_auc": {
+            "estimate": 0.8636,
+            "ci_95": [
+              0.8636,
+              0.8636
+            ]
+          },
+          "pr_auc": {
+            "estimate": 0.6924,
+            "ci_95": [
+              0.6924,
+              0.6924
+            ]
+          },
+          "balanced_accuracy": {
+            "estimate": 0.7317,
+            "ci_95": [
+              0.7317,
+              0.7317
+            ]
+          },
+          "f1_score": {
+            "estimate": 0.6224,
+            "ci_95": [
+              0.6224,
+              0.6224
+            ]
+          }
+        },
+        "by_length": {
+          "<15 aa": {
+            "n_samples": 48,
+            "positives": 24,
+            "roc_auc": {
+              "estimate": 0.7969,
+              "ci_95": [
+                0.7969,
+                0.7969
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.8126,
+              "ci_95": [
+                0.8126,
+                0.8126
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7083,
+              "ci_95": [
+                0.7083,
+                0.7083
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6667,
+              "ci_95": [
+                0.6667,
+                0.6667
+              ]
+            }
+          },
+          "15-24 aa": {
+            "n_samples": 16,
+            "positives": 11,
+            "roc_auc": {
+              "estimate": 0.8182,
+              "ci_95": [
+                0.8182,
+                0.8182
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.9177,
+              "ci_95": [
+                0.9177,
+                0.9177
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.6636,
+              "ci_95": [
+                0.6636,
+                0.6636
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.7619,
+              "ci_95": [
+                0.7619,
+                0.7619
+              ]
+            }
+          },
+          "25-49 aa": {
+            "n_samples": 50,
+            "positives": 20,
+            "roc_auc": {
+              "estimate": 0.905,
+              "ci_95": [
+                0.905,
+                0.905
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.7753,
+              "ci_95": [
+                0.7753,
+                0.7753
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.8583,
+              "ci_95": [
+                0.8583,
+                0.8583
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.8293,
+              "ci_95": [
+                0.8293,
+                0.8293
+              ]
+            }
+          },
+          "50+ aa": {
+            "n_samples": 398,
+            "positives": 87,
+            "roc_auc": {
+              "estimate": 0.8586,
+              "ci_95": [
+                0.8586,
+                0.8586
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6156,
+              "ci_95": [
+                0.6156,
+                0.6156
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.6844,
+              "ci_95": [
+                0.6844,
+                0.6844
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.5255,
+              "ci_95": [
+                0.5255,
+                0.5255
+              ]
+            }
+          }
+        }
+      }
+    },
+    "is_allergen": {
+      "linear_probe": {
+        "ACC-only (125-D)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 100,
+            "roc_auc": {
+              "estimate": 0.6521,
+              "ci_95": [
+                0.6521,
+                0.6521
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.272,
+              "ci_95": [
+                0.272,
+                0.272
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5775,
+              "ci_95": [
+                0.5775,
+                0.5775
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.32,
+              "ci_95": [
+                0.32,
+                0.32
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.8667,
+                "ci_95": [
+                  0.8667,
+                  0.8667
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.1667,
+                "ci_95": [
+                  0.1667,
+                  0.1667
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.4667,
+                "ci_95": [
+                  0.4667,
+                  0.4667
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 99,
+              "roc_auc": {
+                "estimate": 0.6332,
+                "ci_95": [
+                  0.6332,
+                  0.6332
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.3546,
+                "ci_95": [
+                  0.3546,
+                  0.3546
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.583,
+                "ci_95": [
+                  0.583,
+                  0.583
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.3596,
+                "ci_95": [
+                  0.3596,
+                  0.3596
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (320-D Mean)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 100,
+            "roc_auc": {
+              "estimate": 0.8843,
+              "ci_95": [
+                0.8843,
+                0.8843
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6713,
+              "ci_95": [
+                0.6713,
+                0.6713
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7348,
+              "ci_95": [
+                0.7348,
+                0.7348
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.5902,
+              "ci_95": [
+                0.5902,
+                0.5902
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.2,
+                "ci_95": [
+                  0.2,
+                  0.2
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0385,
+                "ci_95": [
+                  0.0385,
+                  0.0385
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 99,
+              "roc_auc": {
+                "estimate": 0.8593,
+                "ci_95": [
+                  0.8593,
+                  0.8593
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6797,
+                "ci_95": [
+                  0.6797,
+                  0.6797
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7242,
+                "ci_95": [
+                  0.7242,
+                  0.7242
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5934,
+                "ci_95": [
+                  0.5934,
+                  0.5934
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (640-D Mean+Max)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 100,
+            "roc_auc": {
+              "estimate": 0.8563,
+              "ci_95": [
+                0.8563,
+                0.8563
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.5892,
+              "ci_95": [
+                0.5892,
+                0.5892
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7363,
+              "ci_95": [
+                0.7363,
+                0.7363
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.5833,
+              "ci_95": [
+                0.5833,
+                0.5833
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.2667,
+                "ci_95": [
+                  0.2667,
+                  0.2667
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0417,
+                "ci_95": [
+                  0.0417,
+                  0.0417
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 99,
+              "roc_auc": {
+                "estimate": 0.8264,
+                "ci_95": [
+                  0.8264,
+                  0.8264
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.5971,
+                "ci_95": [
+                  0.5971,
+                  0.5971
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7226,
+                "ci_95": [
+                  0.7226,
+                  0.7226
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5864,
+                "ci_95": [
+                  0.5864,
+                  0.5864
+                ]
+              }
+            }
+          }
+        },
+        "ACC+ESM (445-D Concat)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 100,
+            "roc_auc": {
+              "estimate": 0.8552,
+              "ci_95": [
+                0.8552,
+                0.8552
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6924,
+              "ci_95": [
+                0.6924,
+                0.6924
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7674,
+              "ci_95": [
+                0.7674,
+                0.7674
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6354,
+              "ci_95": [
+                0.6354,
+                0.6354
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.5333,
+                "ci_95": [
+                  0.5333,
+                  0.5333
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0625,
+                "ci_95": [
+                  0.0625,
+                  0.0625
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 99,
+              "roc_auc": {
+                "estimate": 0.8329,
+                "ci_95": [
+                  0.8329,
+                  0.8329
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7066,
+                "ci_95": [
+                  0.7066,
+                  0.7066
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7579,
+                "ci_95": [
+                  0.7579,
+                  0.7579
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6421,
+                "ci_95": [
+                  0.6421,
+                  0.6421
+                ]
+              }
+            }
+          }
+        }
+      },
+      "mlp_probe": {
+        "ACC-only (125-D)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 100,
+            "roc_auc": {
+              "estimate": 0.6696,
+              "ci_95": [
+                0.6696,
+                0.6696
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.2738,
+              "ci_95": [
+                0.2738,
+                0.2738
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.4934,
+              "ci_95": [
+                0.4934,
+                0.4934
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.0763,
+              "ci_95": [
+                0.0763,
+                0.0763
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 1.0,
+                "ci_95": [
+                  1.0,
+                  1.0
+                ]
+              },
+              "pr_auc": {
+                "estimate": 1.0,
+                "ci_95": [
+                  1.0,
+                  1.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 99,
+              "roc_auc": {
+                "estimate": 0.5833,
+                "ci_95": [
+                  0.5833,
+                  0.5833
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.3018,
+                "ci_95": [
+                  0.3018,
+                  0.3018
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.4851,
+                "ci_95": [
+                  0.4851,
+                  0.4851
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0781,
+                "ci_95": [
+                  0.0781,
+                  0.0781
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (320-D Mean)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 100,
+            "roc_auc": {
+              "estimate": 0.8821,
+              "ci_95": [
+                0.8821,
+                0.8821
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.6346,
+              "ci_95": [
+                0.6346,
+                0.6346
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.6884,
+              "ci_95": [
+                0.6884,
+                0.6884
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.5176,
+              "ci_95": [
+                0.5176,
+                0.5176
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.3333,
+                "ci_95": [
+                  0.3333,
+                  0.3333
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0455,
+                "ci_95": [
+                  0.0455,
+                  0.0455
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 99,
+              "roc_auc": {
+                "estimate": 0.857,
+                "ci_95": [
+                  0.857,
+                  0.857
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.6475,
+                "ci_95": [
+                  0.6475,
+                  0.6475
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6821,
+                "ci_95": [
+                  0.6821,
+                  0.6821
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5269,
+                "ci_95": [
+                  0.5269,
+                  0.5269
+                ]
+              }
+            }
+          }
+        },
+        "ESM-only (640-D Mean+Max)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 100,
+            "roc_auc": {
+              "estimate": 0.8655,
+              "ci_95": [
+                0.8655,
+                0.8655
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.5489,
+              "ci_95": [
+                0.5489,
+                0.5489
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.6951,
+              "ci_95": [
+                0.6951,
+                0.6951
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.5189,
+              "ci_95": [
+                0.5189,
+                0.5189
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.6,
+                "ci_95": [
+                  0.6,
+                  0.6
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0714,
+                "ci_95": [
+                  0.0714,
+                  0.0714
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 99,
+              "roc_auc": {
+                "estimate": 0.8298,
+                "ci_95": [
+                  0.8298,
+                  0.8298
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.5562,
+                "ci_95": [
+                  0.5562,
+                  0.5562
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.6822,
+                "ci_95": [
+                  0.6822,
+                  0.6822
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.5246,
+                "ci_95": [
+                  0.5246,
+                  0.5246
+                ]
+              }
+            }
+          }
+        },
+        "ACC+ESM (445-D Concat)": {
+          "overall": {
+            "n_samples": 512,
+            "positives": 100,
+            "roc_auc": {
+              "estimate": 0.8951,
+              "ci_95": [
+                0.8951,
+                0.8951
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.7434,
+              "ci_95": [
+                0.7434,
+                0.7434
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.7617,
+              "ci_95": [
+                0.7617,
+                0.7617
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.6627,
+              "ci_95": [
+                0.6627,
+                0.6627
+              ]
+            }
+          },
+          "by_length": {
+            "<15 aa": {
+              "n_samples": 48,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "15-24 aa": {
+              "n_samples": 16,
+              "positives": 1,
+              "roc_auc": {
+                "estimate": 0.7333,
+                "ci_95": [
+                  0.7333,
+                  0.7333
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.1,
+                "ci_95": [
+                  0.1,
+                  0.1
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "25-49 aa": {
+              "n_samples": 50,
+              "roc_auc": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.5,
+                "ci_95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.0,
+                "ci_95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "50+ aa": {
+              "n_samples": 398,
+              "positives": 99,
+              "roc_auc": {
+                "estimate": 0.8718,
+                "ci_95": [
+                  0.8718,
+                  0.8718
+                ]
+              },
+              "pr_auc": {
+                "estimate": 0.7525,
+                "ci_95": [
+                  0.7525,
+                  0.7525
+                ]
+              },
+              "balanced_accuracy": {
+                "estimate": 0.7594,
+                "ci_95": [
+                  0.7594,
+                  0.7594
+                ]
+              },
+              "f1_score": {
+                "estimate": 0.6667,
+                "ci_95": [
+                  0.6667,
+                  0.6667
+                ]
+              }
+            }
+          }
+        }
+      },
+      "stacked_ensemble": {
+        "overall": {
+          "n_samples": 512,
+          "positives": 100,
+          "roc_auc": {
+            "estimate": 0.795,
+            "ci_95": [
+              0.795,
+              0.795
+            ]
+          },
+          "pr_auc": {
+            "estimate": 0.5593,
+            "ci_95": [
+              0.5593,
+              0.5593
+            ]
+          },
+          "balanced_accuracy": {
+            "estimate": 0.6619,
+            "ci_95": [
+              0.6619,
+              0.6619
+            ]
+          },
+          "f1_score": {
+            "estimate": 0.4744,
+            "ci_95": [
+              0.4744,
+              0.4744
+            ]
+          }
+        },
+        "by_length": {
+          "<15 aa": {
+            "n_samples": 48,
+            "roc_auc": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "15-24 aa": {
+            "n_samples": 16,
+            "positives": 1,
+            "roc_auc": {
+              "estimate": 0.0667,
+              "ci_95": [
+                0.0667,
+                0.0667
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.0333,
+              "ci_95": [
+                0.0333,
+                0.0333
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "25-49 aa": {
+            "n_samples": 50,
+            "roc_auc": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.5,
+              "ci_95": [
+                0.5,
+                0.5
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.0,
+              "ci_95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "50+ aa": {
+            "n_samples": 398,
+            "positives": 99,
+            "roc_auc": {
+              "estimate": 0.7795,
+              "ci_95": [
+                0.7795,
+                0.7795
+              ]
+            },
+            "pr_auc": {
+              "estimate": 0.5863,
+              "ci_95": [
+                0.5863,
+                0.5863
+              ]
+            },
+            "balanced_accuracy": {
+              "estimate": 0.6568,
+              "ci_95": [
+                0.6568,
+                0.6568
+              ]
+            },
+            "f1_score": {
+              "estimate": 0.4805,
+              "ci_95": [
+                0.4805,
+                0.4805
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "short_peptide_hypothesis": {
+    "is_antigen": {
+      "n_short_peptides": 48,
+      "acc_only_auc": {
+        "estimate": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "esm_only_auc": {
+        "estimate": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "concat_auc": {
+        "estimate": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "stack_auc": {
+        "estimate": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "esm_delta_vs_acc": 0.0,
+      "concat_delta_vs_acc": 0.0,
+      "hypothesis_supported": false
+    },
+    "is_toxic": {
+      "n_short_peptides": 48,
+      "acc_only_auc": {
+        "estimate": 0.6875,
+        "ci_95": [
+          0.6875,
+          0.6875
+        ]
+      },
+      "esm_only_auc": {
+        "estimate": 0.6927,
+        "ci_95": [
+          0.6927,
+          0.6927
+        ]
+      },
+      "concat_auc": {
+        "estimate": 0.7135,
+        "ci_95": [
+          0.7135,
+          0.7135
+        ]
+      },
+      "stack_auc": {
+        "estimate": 0.7969,
+        "ci_95": [
+          0.7969,
+          0.7969
+        ]
+      },
+      "esm_delta_vs_acc": 0.005199999999999982,
+      "concat_delta_vs_acc": 0.026000000000000023,
+      "hypothesis_supported": true
+    },
+    "is_allergen": {
+      "n_short_peptides": 48,
+      "acc_only_auc": {
+        "estimate": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "esm_only_auc": {
+        "estimate": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "concat_auc": {
+        "estimate": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "stack_auc": {
+        "estimate": 0.5,
+        "ci_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "esm_delta_vs_acc": 0.0,
+      "concat_delta_vs_acc": 0.0,
+      "hypothesis_supported": false
+    }
+  },
+  "cpu_benchmarks": {
+    "classical_acc": {
+      "latency_per_peptide_ms": 2.232126562466874,
+      "throughput_peptides_per_sec": 448.0032704305227,
+      "memory_footprint_mb": "< 5 MB"
+    },
+    "esm2_8m_int8": {
+      "model_id": "facebook/esm2_t6_8M_UR50D",
+      "quantization": "int8",
+      "batch_benchmarks": {
+        "bs_1": {
+          "batch_size": 1,
+          "mean_batch_time_sec": 0.004200899996794761,
+          "latency_per_peptide_ms": 4.20089999679476,
+          "throughput_peptides_per_sec": 238.04422879930223
+        },
+        "bs_64": {
+          "batch_size": 64,
+          "mean_batch_time_sec": 0.08586094000202138,
+          "latency_per_peptide_ms": 1.341577187531584,
+          "throughput_peptides_per_sec": 745.39132693508
+        }
+      },
+      "memory_rss_mb": {
+        "before": 568.37,
+        "after": 589.4,
+        "delta": 21.03
+      }
+    },
+    "esm2_8m_fp32": {
+      "model_id": "facebook/esm2_t6_8M_UR50D",
+      "quantization": "fp32",
+      "batch_benchmarks": {
+        "bs_1": {
+          "batch_size": 1,
+          "mean_batch_time_sec": 0.0042297600011806935,
+          "latency_per_peptide_ms": 4.2297600011806935,
+          "throughput_peptides_per_sec": 236.42003322194648
+        },
+        "bs_64": {
+          "batch_size": 64,
+          "mean_batch_time_sec": 0.1610116800002288,
+          "latency_per_peptide_ms": 2.515807500003575,
+          "throughput_peptides_per_sec": 397.4866916481404
+        }
+      },
+      "memory_rss_mb": {
+        "before": 589.4,
+        "after": 617.1,
+        "delta": 27.7
+      }
+    },
+    "esm2_35m_int8": {
+      "model_id": "facebook/esm2_t12_35M_UR50D",
+      "quantization": "int8",
+      "batch_benchmarks": {
+        "bs_1": {
+          "batch_size": 1,
+          "mean_batch_time_sec": 0.009879479999653995,
+          "latency_per_peptide_ms": 9.879479999653995,
+          "throughput_peptides_per_sec": 101.21990226560736
+        },
+        "bs_64": {
+          "batch_size": 64,
+          "mean_batch_time_sec": 0.4381837199995061,
+          "latency_per_peptide_ms": 6.846620624992283,
+          "throughput_peptides_per_sec": 146.05745736074388
+        }
+      },
+      "memory_rss_mb": {
+        "before": 617.1,
+        "after": 653.57,
+        "delta": 36.46
+      }
+    }
+  }
+}
