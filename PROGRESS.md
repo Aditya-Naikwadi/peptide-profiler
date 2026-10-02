@@ -53,7 +53,7 @@ Maintained continuously per operating rule 3. Status: `todo` / `in-progress` / `
 | ID | Task | Acceptance Criteria | Status | Commit | Evidence |
 |---|---|---|:---:|---|---|
 | **4.1** | AAC, dipeptide, k-mer, ACC, PCP versioned | Unit tests passing | done | `b188648` | [`src/features/`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/features/) (AAC, DPC, Kmer, ACC, PCP) |
-| **4.2** | Optional PLM embeddings feasibility assessment | Decision recorded | done | `b188648` | [`src/features/plm.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/features/plm.py) |
+| **4.2** | Pinned PLM (ESM-2) ONNX INT8, parity & length-stratified benchmark | Parity >= 0.99, nested CV, deployment budget | done | `150e68e` | [`src/features/esm2_onnx.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/src/features/esm2_onnx.py), [`docs/ESM2_REPRESENTATION_REPORT.md`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/docs/ESM2_REPRESENTATION_REPORT.md), [`tests/test_esm2_onnx.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_esm2_onnx.py) (6/6 tests green, parity 0.9986) |
 | **4.3** | Feature-parity tests | Golden vectors identical train vs serve | done | `b188648` | [`tests/test_features.py`](file:///c:/Users/naikw/OneDrive/Desktop/project/peptide/tests/test_features.py) (8/8 parity tests green) |
 
 ---
