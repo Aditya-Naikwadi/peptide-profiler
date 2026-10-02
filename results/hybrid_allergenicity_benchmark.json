@@ -1,0 +1,625 @@
+{
+  "metadata": {
+    "phase": "WP6.1: Hybrid Regulatory Allergenicity Engine",
+    "timestamp": "2026-10-02T08:07:30Z",
+    "total_sequences": 512,
+    "total_allergens": 100,
+    "database_provenance": {
+      "db_name": "WHO-IUIS_AllergenOnline_Curated",
+      "db_version": "2024.1-curated",
+      "db_sha256": "fe82194135202d5bf88044728443c9dfcc64176b4f89a42a6e487314d10559d4",
+      "license": "CC BY 4.0 / Research and Diagnostic Screening",
+      "total_sequences": "100"
+    },
+    "validation_parity": {
+      "validation_cases_count": 50,
+      "matching_cases_count": 50,
+      "agreement_rate": 1.0,
+      "matrix": "BLOSUM50",
+      "gap_penalties": "open=10, extend=2",
+      "status": "PASS"
+    },
+    "leakage_exclusion_protocol": "Self-hits, cluster-homologs, and test-fold allergens excluded."
+  },
+  "performance_comparison": {
+    "rule_only": {
+      "positive_class": "allergen",
+      "n_samples": 512,
+      "n_positives": 100,
+      "n_negatives": 412,
+      "threshold": 0.5,
+      "auroc": 0.6714,
+      "auprc": 0.3101,
+      "balanced_accuracy": 0.6714,
+      "mcc": 0.3164,
+      "sensitivity": 0.52,
+      "specificity": 0.8228,
+      "ppv": 0.416,
+      "npv": 0.876,
+      "brier_score": 0.2363,
+      "log_loss": 8.1626,
+      "adaptive_ece_15bins": 0.2363
+    },
+    "ml_only": {
+      "metrics": {
+        "positive_class": "allergen",
+        "n_samples": 512,
+        "n_positives": 100,
+        "n_negatives": 412,
+        "threshold": 0.5,
+        "auroc": 0.8588,
+        "auprc": 0.5555,
+        "balanced_accuracy": 0.7488,
+        "mcc": 0.4446,
+        "sensitivity": 0.67,
+        "specificity": 0.8277,
+        "ppv": 0.4855,
+        "npv": 0.9118,
+        "brier_score": 0.1362,
+        "log_loss": 0.4184,
+        "adaptive_ece_15bins": 0.137
+      },
+      "confidence_intervals_95": {
+        "auroc": {
+          "point_estimate": 0.8586,
+          "ci_lower_95": 0.8152,
+          "ci_upper_95": 0.8979
+        },
+        "auprc": {
+          "point_estimate": 0.5642,
+          "ci_lower_95": 0.4232,
+          "ci_upper_95": 0.6968
+        },
+        "balanced_accuracy": {
+          "point_estimate": 0.7491,
+          "ci_lower_95": 0.6867,
+          "ci_upper_95": 0.8073
+        },
+        "mcc": {
+          "point_estimate": 0.4454,
+          "ci_lower_95": 0.332,
+          "ci_upper_95": 0.5582
+        },
+        "sensitivity": {
+          "point_estimate": 0.6709,
+          "ci_lower_95": 0.5567,
+          "ci_upper_95": 0.7778
+        },
+        "specificity": {
+          "point_estimate": 0.8273,
+          "ci_lower_95": 0.7792,
+          "ci_upper_95": 0.8716
+        },
+        "ppv": {
+          "point_estimate": 0.4877,
+          "ci_lower_95": 0.375,
+          "ci_upper_95": 0.6014
+        },
+        "npv": {
+          "point_estimate": 0.9111,
+          "ci_lower_95": 0.8753,
+          "ci_upper_95": 0.9447
+        },
+        "brier_score": {
+          "point_estimate": 0.1363,
+          "ci_lower_95": 0.118,
+          "ci_upper_95": 0.1552
+        },
+        "log_loss": {
+          "point_estimate": 0.4184,
+          "ci_lower_95": 0.3738,
+          "ci_upper_95": 0.4652
+        },
+        "adaptive_ece_15bins": {
+          "point_estimate": 0.1392,
+          "ci_lower_95": 0.1031,
+          "ci_upper_95": 0.1775
+        }
+      },
+      "length_stratified": {
+        "5-9": {
+          "sample_count": 10,
+          "positive_count": 0,
+          "negative_count": 10,
+          "auroc": null,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "ppv": 0.0,
+          "npv": 1.0,
+          "brier_score": 0.0123
+        },
+        "10-14": {
+          "sample_count": 38,
+          "positive_count": 0,
+          "negative_count": 38,
+          "auroc": null,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "ppv": 0.0,
+          "npv": 1.0,
+          "brier_score": 0.0282
+        },
+        "15-24": {
+          "sample_count": 16,
+          "positive_count": 1,
+          "negative_count": 15,
+          "auroc": 0.3333,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "ppv": 0.0,
+          "npv": 0.9375,
+          "brier_score": 0.0748
+        },
+        "25-49": {
+          "sample_count": 50,
+          "positive_count": 0,
+          "negative_count": 50,
+          "auroc": null,
+          "balanced_accuracy": 0.49,
+          "sensitivity": 0.0,
+          "specificity": 0.98,
+          "ppv": 0.0,
+          "npv": 1.0,
+          "brier_score": 0.0541
+        },
+        "50+": {
+          "sample_count": 398,
+          "positive_count": 99,
+          "negative_count": 299,
+          "auroc": 0.8246,
+          "balanced_accuracy": 0.7213,
+          "sensitivity": 0.6768,
+          "specificity": 0.7659,
+          "ppv": 0.4891,
+          "npv": 0.8774,
+          "brier_score": 0.1625
+        }
+      },
+      "reliability_diagram": [
+        {
+          "mean_predicted_prob": 0.0166,
+          "empirical_accuracy": 0.0,
+          "bin_min_prob": 0.0,
+          "bin_max_prob": 0.03,
+          "sample_count": 35
+        },
+        {
+          "mean_predicted_prob": 0.0428,
+          "empirical_accuracy": 0.0,
+          "bin_min_prob": 0.03,
+          "bin_max_prob": 0.0567,
+          "sample_count": 35
+        },
+        {
+          "mean_predicted_prob": 0.0703,
+          "empirical_accuracy": 0.0294,
+          "bin_min_prob": 0.058,
+          "bin_max_prob": 0.0802,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.1016,
+          "empirical_accuracy": 0.0,
+          "bin_min_prob": 0.0854,
+          "bin_max_prob": 0.1197,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.1353,
+          "empirical_accuracy": 0.0294,
+          "bin_min_prob": 0.1199,
+          "bin_max_prob": 0.1514,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.1687,
+          "empirical_accuracy": 0.0,
+          "bin_min_prob": 0.152,
+          "bin_max_prob": 0.1846,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.2144,
+          "empirical_accuracy": 0.0294,
+          "bin_min_prob": 0.1848,
+          "bin_max_prob": 0.2428,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.2857,
+          "empirical_accuracy": 0.1765,
+          "bin_min_prob": 0.2457,
+          "bin_max_prob": 0.3152,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.3526,
+          "empirical_accuracy": 0.2059,
+          "bin_min_prob": 0.3278,
+          "bin_max_prob": 0.3801,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.4237,
+          "empirical_accuracy": 0.1471,
+          "bin_min_prob": 0.3812,
+          "bin_max_prob": 0.4515,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.4799,
+          "empirical_accuracy": 0.3824,
+          "bin_min_prob": 0.4566,
+          "bin_max_prob": 0.5036,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.5524,
+          "empirical_accuracy": 0.3235,
+          "bin_min_prob": 0.5098,
+          "bin_max_prob": 0.6066,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.6369,
+          "empirical_accuracy": 0.4412,
+          "bin_min_prob": 0.6071,
+          "bin_max_prob": 0.6767,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.7079,
+          "empirical_accuracy": 0.5294,
+          "bin_min_prob": 0.6779,
+          "bin_max_prob": 0.7454,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.8139,
+          "empirical_accuracy": 0.6471,
+          "bin_min_prob": 0.7456,
+          "bin_max_prob": 0.8957,
+          "sample_count": 34
+        }
+      ]
+    },
+    "hybrid_engine": {
+      "metrics": {
+        "positive_class": "allergen",
+        "n_samples": 512,
+        "n_positives": 100,
+        "n_negatives": 412,
+        "threshold": 0.5,
+        "auroc": 0.8089,
+        "auprc": 0.4059,
+        "balanced_accuracy": 0.7569,
+        "mcc": 0.4165,
+        "sensitivity": 0.81,
+        "specificity": 0.7039,
+        "ppv": 0.399,
+        "npv": 0.9385,
+        "brier_score": 0.2367,
+        "log_loss": 5.2186,
+        "adaptive_ece_15bins": 0.2682
+      },
+      "confidence_intervals_95": {
+        "auroc": {
+          "point_estimate": 0.8088,
+          "ci_lower_95": 0.7625,
+          "ci_upper_95": 0.8511
+        },
+        "auprc": {
+          "point_estimate": 0.4096,
+          "ci_lower_95": 0.312,
+          "ci_upper_95": 0.5189
+        },
+        "balanced_accuracy": {
+          "point_estimate": 0.7572,
+          "ci_lower_95": 0.6947,
+          "ci_upper_95": 0.809
+        },
+        "mcc": {
+          "point_estimate": 0.4173,
+          "ci_lower_95": 0.3137,
+          "ci_upper_95": 0.5081
+        },
+        "sensitivity": {
+          "point_estimate": 0.8107,
+          "ci_lower_95": 0.7097,
+          "ci_upper_95": 0.8962
+        },
+        "specificity": {
+          "point_estimate": 0.7036,
+          "ci_lower_95": 0.6463,
+          "ci_upper_95": 0.7582
+        },
+        "ppv": {
+          "point_estimate": 0.4012,
+          "ci_lower_95": 0.31,
+          "ci_upper_95": 0.4932
+        },
+        "npv": {
+          "point_estimate": 0.9381,
+          "ci_lower_95": 0.9024,
+          "ci_upper_95": 0.9676
+        },
+        "brier_score": {
+          "point_estimate": 0.2364,
+          "ci_lower_95": 0.1996,
+          "ci_upper_95": 0.2722
+        },
+        "log_loss": {
+          "point_estimate": 5.2183,
+          "ci_lower_95": 4.0177,
+          "ci_upper_95": 6.483
+        },
+        "adaptive_ece_15bins": {
+          "point_estimate": 0.2675,
+          "ci_lower_95": 0.2218,
+          "ci_upper_95": 0.3107
+        }
+      },
+      "length_stratified": {
+        "5-9": {
+          "sample_count": 10,
+          "positive_count": 0,
+          "negative_count": 10,
+          "auroc": null,
+          "balanced_accuracy": 0.5,
+          "sensitivity": 0.0,
+          "specificity": 1.0,
+          "ppv": 0.0,
+          "npv": 1.0,
+          "brier_score": 0.0123
+        },
+        "10-14": {
+          "sample_count": 38,
+          "positive_count": 0,
+          "negative_count": 38,
+          "auroc": null,
+          "balanced_accuracy": 0.4868,
+          "sensitivity": 0.0,
+          "specificity": 0.9737,
+          "ppv": 0.0,
+          "npv": 1.0,
+          "brier_score": 0.0532
+        },
+        "15-24": {
+          "sample_count": 16,
+          "positive_count": 1,
+          "negative_count": 15,
+          "auroc": 0.3333,
+          "balanced_accuracy": 0.4667,
+          "sensitivity": 0.0,
+          "specificity": 0.9333,
+          "ppv": 0.0,
+          "npv": 0.9333,
+          "brier_score": 0.1363
+        },
+        "25-49": {
+          "sample_count": 50,
+          "positive_count": 0,
+          "negative_count": 50,
+          "auroc": null,
+          "balanced_accuracy": 0.46,
+          "sensitivity": 0.0,
+          "specificity": 0.92,
+          "ppv": 0.0,
+          "npv": 1.0,
+          "brier_score": 0.1135
+        },
+        "50+": {
+          "sample_count": 398,
+          "positive_count": 99,
+          "negative_count": 299,
+          "auroc": 0.764,
+          "balanced_accuracy": 0.7151,
+          "sensitivity": 0.8182,
+          "specificity": 0.612,
+          "ppv": 0.4112,
+          "npv": 0.9104,
+          "brier_score": 0.2793
+        }
+      },
+      "reliability_diagram": [
+        {
+          "mean_predicted_prob": 0.02,
+          "empirical_accuracy": 0.0,
+          "bin_min_prob": 0.0,
+          "bin_max_prob": 0.0367,
+          "sample_count": 35
+        },
+        {
+          "mean_predicted_prob": 0.0481,
+          "empirical_accuracy": 0.0,
+          "bin_min_prob": 0.0378,
+          "bin_max_prob": 0.0627,
+          "sample_count": 35
+        },
+        {
+          "mean_predicted_prob": 0.0797,
+          "empirical_accuracy": 0.0294,
+          "bin_min_prob": 0.0657,
+          "bin_max_prob": 0.0937,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.1144,
+          "empirical_accuracy": 0.0,
+          "bin_min_prob": 0.095,
+          "bin_max_prob": 0.1368,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.1541,
+          "empirical_accuracy": 0.0294,
+          "bin_min_prob": 0.1378,
+          "bin_max_prob": 0.175,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.1993,
+          "empirical_accuracy": 0.0294,
+          "bin_min_prob": 0.1771,
+          "bin_max_prob": 0.2372,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.2861,
+          "empirical_accuracy": 0.1176,
+          "bin_min_prob": 0.2384,
+          "bin_max_prob": 0.3451,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.3833,
+          "empirical_accuracy": 0.1471,
+          "bin_min_prob": 0.3453,
+          "bin_max_prob": 0.4303,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.4647,
+          "empirical_accuracy": 0.1765,
+          "bin_min_prob": 0.4322,
+          "bin_max_prob": 0.4946,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.5677,
+          "empirical_accuracy": 0.2647,
+          "bin_min_prob": 0.4949,
+          "bin_max_prob": 0.6427,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.7102,
+          "empirical_accuracy": 0.5,
+          "bin_min_prob": 0.6437,
+          "bin_max_prob": 0.8001,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 0.9505,
+          "empirical_accuracy": 0.2059,
+          "bin_min_prob": 0.8026,
+          "bin_max_prob": 1.0,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 1.0,
+          "empirical_accuracy": 0.3235,
+          "bin_min_prob": 1.0,
+          "bin_max_prob": 1.0,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 1.0,
+          "empirical_accuracy": 0.7353,
+          "bin_min_prob": 1.0,
+          "bin_max_prob": 1.0,
+          "sample_count": 34
+        },
+        {
+          "mean_predicted_prob": 1.0,
+          "empirical_accuracy": 0.3824,
+          "bin_min_prob": 1.0,
+          "bin_max_prob": 1.0,
+          "sample_count": 34
+        }
+      ]
+    },
+    "fixed_95pct_specificity_comparison": {
+      "target_specificity": 0.95,
+      "ml_only_operating_threshold": 0.69,
+      "ml_only_recall": 0.37,
+      "hybrid_recall": 0.47,
+      "exact_recall_delta": 0.1
+    }
+  },
+  "length_bin_breakdown": {
+    "5-9": {
+      "sample_count": 10,
+      "positive_count": 0,
+      "primary_not_applicable_count": 10,
+      "ml_only": {
+        "auroc": null,
+        "sensitivity": 0.0,
+        "specificity": 1.0
+      },
+      "hybrid": {
+        "auroc": null,
+        "sensitivity": 0.0,
+        "specificity": 1.0
+      },
+      "recall_gain": 0.0
+    },
+    "10-14": {
+      "sample_count": 38,
+      "positive_count": 0,
+      "primary_not_applicable_count": 38,
+      "ml_only": {
+        "auroc": null,
+        "sensitivity": 0.0,
+        "specificity": 1.0
+      },
+      "hybrid": {
+        "auroc": null,
+        "sensitivity": 0.0,
+        "specificity": 0.9737
+      },
+      "recall_gain": 0.0
+    },
+    "15-24": {
+      "sample_count": 16,
+      "positive_count": 1,
+      "primary_not_applicable_count": 16,
+      "ml_only": {
+        "auroc": 0.3333,
+        "sensitivity": 0.0,
+        "specificity": 1.0
+      },
+      "hybrid": {
+        "auroc": 0.3333,
+        "sensitivity": 0.0,
+        "specificity": 0.9333
+      },
+      "recall_gain": 0.0
+    },
+    "25-49": {
+      "sample_count": 50,
+      "positive_count": 0,
+      "primary_not_applicable_count": 50,
+      "ml_only": {
+        "auroc": null,
+        "sensitivity": 0.0,
+        "specificity": 0.98
+      },
+      "hybrid": {
+        "auroc": null,
+        "sensitivity": 0.0,
+        "specificity": 0.92
+      },
+      "recall_gain": 0.0
+    },
+    "50+": {
+      "sample_count": 398,
+      "positive_count": 99,
+      "primary_not_applicable_count": 37,
+      "ml_only": {
+        "auroc": 0.8246,
+        "sensitivity": 0.6768,
+        "specificity": 0.7659
+      },
+      "hybrid": {
+        "auroc": 0.764,
+        "sensitivity": 0.8182,
+        "specificity": 0.612
+      },
+      "recall_gain": 0.1414
+    }
+  }
+}
